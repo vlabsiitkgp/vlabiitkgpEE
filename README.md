@@ -2,11 +2,8 @@
 ## Virtual Labs IIT Kharagpur for Electrical Engineering Labs
 ## Empty template of Virtual labs IIT Khargpur webpage.
 
-<<<<<<< HEAD
 ## Read the instructions in [Readme.pdf](https://github.com/vlabsiitkgp/vlabiitkgpEE/blob/master/Readme.pdf) document to use Atom to upload to GitHub.
-=======
-## Read the instructions in [Readme.pdf](https://github.com/vlabsiitkgp/vlabiitkgpME/blob/master/Readme.pdf) document to use Atom to upload to GitHub.
->>>>>>> ef19f1faa9d6f21579844dd0b997ee13271f02af
+
 
 #### Last updated on
 ####  20-04-2020
