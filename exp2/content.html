@@ -1,11 +1,10 @@
 <!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
 <!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <html>
     <head>
-        <title>Virtual Lab Name</title>
-        <script type="text/javascript" async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>
+        <title>Estimation of Fourier Coefficients of a Periodic Signal</title>
     </head>
 
     <body>
@@ -19,34 +18,34 @@
                     <img src="../images/logo.jpg"></div>
 
                 <div class="heading" id="experiment-header-heading">
-                    <!-- Write the name of your lab and link it to the home
-          page of your lab (h1 tag is preferred while writing your
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
           lab name)-->
-                    <a href="../index.html">Virtual Lab Name</a>
-                </div><!-- Add any additional element you want to add to the lab
-        header, For example : Help (Enclosing them with suitable
+                    <a href="../index.html">Analog Signals, Network and Measurement Laboratory</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
         div is recommended)-->
             </header><!-- The lab article is the main content area where all the experiment content sits-->
 
             <article id="experiment-article">
-                <!-- The lab article has an header, optional navigational
-        menu, number of sections, an optional sidebar and a closing
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
         footer-->
 
                 <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
 
                 <header class="heading" id="experiment-article-heading">
-                    Name of Experiment 2
+                   Estimation of Fourier Coefficients of a Periodic Signal
                 </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
 
                 <nav class="default" id="experiment-article-navigation">
                     <ul id="experiment-article-navigation-menu">
-                        <!-- The menu can be dynamically generated to contain
-              the headings of your sections or instead write the
-              menu items of your choice individually enclosedu in
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
               &lt;li&gt; tag as shown below-->
                     </ul>
-                </nav><!-- All the sections of your lab or experiment can be
+                </nav><!-- All the sections of your lab or experiment can be 
           enclosed together with a div element as shown below-->
 
                 <div id="experiment-article-sections">
@@ -55,32 +54,71 @@
                     <section id="experiment-article-section-1">
                         <div class="icon" id="experiment-article-section-1-icon">
                             <!-- Enclose the icon image of your lab -->
-                            <img src="../images/introduction.jpg"></div>
+                            <img src="../images/theory.jpg"></div>
                         <!-- The heading for the section can be enclosed in a div tag. -->
 
                         <div class="heading" id="experiment-article-section-1-heading">
-                            Introduction
+                            Theory
                         </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
 
-                        <div class="content" id="experiment-article-section-1-content">
-                            <p style="text-align: justify">
-                              Introduction to Experiment
-
-                            </p>
-                        </div>
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p>
+								<span style="font-size: 21px; "><b>Objective: Experimental verification of Fourier Coefficients of a square wave Signal using passive network.</b></span>
+									<div>
+									In this experiment a circuit(Fig 1) will be provided. A p-p sinusoidal signal of amplitude 3V will be applied to it and its frequency response would be verifed 
+									to know which kind of filter circuit it is approaching to.</br>
+									
+									 <img alt="" src="js-simulator/images/circuit.png" style="width:30%;height:30%;position:relative;top:40px;left:30px;">
+									  <figcaption style="position:relative;top:40px;left:50px;">[Fig 1:Passive Circuit diagram]</figcaption></br></br></br>
+									  
+									After verifing frequency response a p-p square wave signal is applied to the circuit.Its frequency is adjusted to observe different harmonic components.
+									Here we observe only 1st , 3rd & 5th harmonics by adjusting frequencies ,volt/division knob and time/division knob in oscilloscope.The peak amplitude of the
+									output votage may be in milivolts,depending on the passive components.In simulation the values of Fundamental component, 1st,3rd,5th harmonic coefficients are found at the end.
+									We know that, a square wave is a combination of sine waves.generally,the equation of a square wave is :</br>
+									Y(t)= 4/π(sin⁡wt + sin⁡3wt/3 + sin⁡5wt/5 +……….).</br>
+				   </p>					
+                     </div>
+					 </div>
                     </section>
                     <!-------------------------- Second section of the article---------------------------------------->
 
                     <section id="experiment-article-section-2">
                         <div class="icon" id="experiment-article-section-2-icon">
                             <!-- Enclose the icon image of your lab. -->
-                            <img src="../images/theory.jpg"></div>
+                            <img src="../images/procedure.jpg"></div>
                         <!-- The heading for the section can be enclosed in a div tag. -->
 
-                        <div class="content" id="experiment-article-section-2-content">
-                            <p style="text-align: justify; font-weight: bold">Theory</p>
-                              Theory of Experiment
-                            </p>
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Procedure
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                        <figure style="text-align:center">
+									  <img alt="" src="js-simulator/images/circuit.png" style="width:50%;height:50%;"/>
+									  <figcaption>[Passive Circuit diagram]</figcaption>
+									</figure>    
+						 <ol type="1">
+  <li>Connect the circuit elements as mentioned below</br> 1-3 ,3-4 ,5-6, 8-7, 7-9, 10-2(ex:-Drag from 1 and click on 3.)</li>
+  
+  <li> 3 volt p-p sinusoidal voltage is applied at the input.Put R=100KΩ ,L=10mH, C=100nF.</li>
+  
+<li>Switch on the oscilloscope by clicking "ON" button & click twice the Sine wave button for input signal & click on the"Output" button to observe the output.Channel & Channel2 button shows the input & output signals respectively. Dual, shows both of them. </li> 
+
+<li>Change the Frequency of input signal by the Frequency knob from 100Hz to 1KHz & observe the corresponding output voltage signal.</li>
+
+<li>Switch off the oscilloscope</li><br/>
+
+<li>Click on Tableshow button each time after clicking on "output" button to see observation eachtime.</li>
+
+<li>Click on Plot button to see the frequency response plot(Gain(dB)vs.Frequency(KHz)).Click on Clear button to clear datas.</li>
+
+ <li>Switch off the oscilloscope.Then again switch on.</li>
+ <li>click on square wave button & keep the frequency around 15KHz.click square output to see first harmonic component & click on Tableshow to have the component value</li>
+ <li> Repeat the above step for square wave input of frequencies around 5KHz & 3.5KHz to have values of 3rd & 5th haronics respectively.</li>
+ <li> Switch off the oscilloscope.</li>
+ <li> For above three steps keep L & C values 10 mH-10nF, 1mh-100nF, 0.1mH-1000nF</li>
+ 
+  </ol>				
                         </div>
                     </section>
                     <!-------------------------- Third section of the article---------------------------------------->
@@ -88,14 +126,23 @@
                     <section id="experiment-article-section-3">
                         <div class="icon" id="experiment-article-section-3-icon">
                             <!-- Enclose the icon image of your lab. -->
-                            <img src="../images/objective.jpg"></div>
+                            <img src="../images/demo.jpg"></div>
 
                         <div class="heading" id="experiment-article-section-3-heading">
-                            Objective
+                            Operating Environment
                         </div>
 
-                        <div class="content" id="experiment-article-section-3-content">
-                            Objective of Experiment
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p>
+									<h3><span style="color: rgb(153, 51, 102); ">Minimum System Requirement</span>:</h3>
+									<ul>
+										<li>&nbsp; A standard PC running Microsoft Windows XP, Windows Vista.</li>
+										<li>&nbsp; 512MB RAM and 500 MB of available hard-disk space is recommended&nbsp;</li>
+										<li>&nbsp; 1024x768 or higher screen resolution;</li>
+										<li>&nbsp; a mouse or other pointing device&nbsp;</li>
+										<li>&nbsp; A CD-ROM drive</li>
+									</ul>
+							</p>                            
                         </div>
                     </section>
                     <!-------------------------- Fourth section of the article---------------------------------------->
@@ -103,88 +150,75 @@
                     <section id="experiment-article-section-4">
                         <div class="icon" id="experiment-article-section-4-icon">
                             <!-- Enclose the icon image of your lab.-->
-                            <img src="../images/procedure.jpg"></div>
-
-                        <div class="heading" id="experiment-article-section-4-heading">
-                            Procedure
-                        </div>
-
-                        <div class="content" id="experiment-article-section-4-content">
-                            Procedure to do Experiment
-                        </div>
-                    </section>
-
-
-                    <!-------------------------- Fifth section of the article---------------------------------------->
-
-                    <section id="experiment-article-section-5">
-                        <div class="icon" id="experiment-article-section-5-icon">
-                            <!-- Enclose the icon image of your lab.-->
                             <img src="../images/simulation.jpg"></div>
 
-                        <div class="heading" id="experiment-article-section-5-heading">
+                        <div class="heading" id="experiment-article-section-4-heading">
                             Simulator
                         </div>
 
-                        <div class="content" id="experiment-article-section-5-content">
-
-                            <p style="text-align: justify; padding-bottom: 20px">
-                                Simulator for the Experiment
-                            </p>
+                        <div class="content" id="experiment-article-section-4-content">  
+						<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>Pre-Requisite to run the Simulator:</b></span>
+							<p> <br>&nbsp&nbsp&nbsp The simulator for this experiment is designed based on JavaScript platform combined with HTML5 Canvas for graphics. So the users are recommended to use browsers with HTML5 compatible.</p> 					
+                            <br> <br>
+							<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>Link to the simulator:</b></span>
+							<p>
+								<h3><a style=" color: red "href="./js-simulator/Fourier Coeff through Passive Network.html" target="_blank">Click here to perform the Experiment</a></h3>
+								
+								<br><br><br>
+							</p>                            
                         </div>
                     </section>
-
-                    <!-------------------------- Sixth section of the article---------------------------------------->
-
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+					<section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Quiz
+                        </div>
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <div id="vlab-quiz-wrapper">
+                                <p style="text-align:left; font-size:18px; font-weight:bold;">Test Your Knowledge!!</p><br/>
+                                <div id="vlab-quiz-question-answer-options"></div>                                
+                                <br/>
+                                <div id="vlab-quiz-trigger">
+                                    <button id="vqt-start" onclick="quizInitializeAllQuestion()" style="display: block;">Start</button>                                    
+                                </div>            
+                            </div>                      
+                        </div>
+                    </section>
+					<!-------------------------- Sixth section of the article---------------------------------------->
                     <section id="experiment-article-section-6">
                         <div class="icon" id="experiment-article-section-6-icon">
                             <!-- Enclose the icon image of your lab.-->
-                            <img src="../images/quizzes.jpg"></div>
-
-                        <div class="heading" id="experiment-article-section-6-heading">
-                            Quizzes
-                        </div>
-
-                        <div class="content" id="experiment-article-section-6-content">
-                            <p>Quizzes content.....</p>
-                        </div>
-                    </section>
-                    <!-------------------------- Seventh section of the article---------------------------------------->
-
-                    <section id="experiment-article-section-7">
-                        <div class="icon" id="experiment-article-section-7-icon">
-                            <!-- Enclose the icon image of your lab.-->
                             <img src="../images/reference.jpg"></div>
 
-                        <div class="heading" id="experiment-article-section-7-heading">
+                        <div class="heading" id="experiment-article-section-6-heading">
                             Reference
                         </div>
 
-                        <div class="content" id="experiment-article-section-7-content">
-                            <strong>Books </strong>
-                            <ol>
-                              <li></li>
-                              <li></li>
-                            </ol>
-                            <strong>Papers</strong>
-                            <ol>
-                              <li></li>
-                              <li></li>
-                            </ol>
-
-                            <strong>NPTEL</strong>
-                            <ol>
-                              <li></li>
-                              <li></li>
-                            </ol>
-                          </div>
-                    </section>
-
+                        <div class="content" id="experiment-article-section-6-content">                            
+                            <p>
+								<p>&nbsp;</p>
+								<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>A) Book Name:</b></span><br>
+									<p>1)Electronic Devices & Circuits by J.B Gupta </p>
+									
+									
+								<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>B) Video Lecture:</b></span><br>
+									<p><a href="https://www.youtube.com/watch?v=yQQH-3eftIE" target="_blank">Click here for NPTEL Video Lecture</a></p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+							</p>                            
+                        </div>
+                    </section>        
                 </div>
+            <footer class="default" id="lab-article-footer">
+                    <!-- Put the content that you want to appear here -->
+                </footer>
             </article>
-            <footer class="default" id="lab-footer">
-                <!-- Put the content here-->
-                <div style="margin-left:40%; margin-right:40% ">
+             <footer class="default" id="lab-footer">
+               <div style="margin-left:40%; margin-right:40% ">
                     Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
                 </div>
             </footer>
