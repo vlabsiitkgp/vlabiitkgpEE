@@ -21,81 +21,71 @@ var quizJSON = {
     },
     "questions": [
         {// Question 1
-            "q": "A two port network is shown in the fig.1. Find the Z-matrix of the network.<br/><p style=\"text-align:center\"><img src=\"./image/2portqz1.jpg\" style=\"width:450px;height:290px;\"></p>",
+            "q": "Consider the following specifications and calculate the high cut-off frequency for the circuit given.<br/><p style=\"text-align:center\"><img src=\"./image/P1.png\" style=\"width:450px;height:290px;\"></p>",
             "a": [
-                {"option": "`[[Z_(1), Z_(1)+Z_(2)], [Z_(1)+Z_(2), Z_(2)]]`", "correct": false},
-                {"option": "`[[Z_(1), Z_(1)], [Z_(1)+Z_(2), Z_(2)]]`", "correct": false},
-                {"option": "`[[Z_(1), Z_(2)], [Z_(2),Z_(1)+Z_(2)]]`", "correct": false},
-                {"option": "`[[Z_(1), Z_(1)], [Z_(1),Z_(1)+Z_(2)]]`", "correct": true} // no comma here
+                {"option": "`95Hz`", "correct": false},
+                {"option": "`48Hz`", "correct": false},
+                {"option": "`14Hz`", "correct": false},
+                {"option": "`33Hz`", "correct": true} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p>Try again.</p>" // no comma here
         },
 	{// Question 2
-            "q": "The two port network P shown in fig.2 has ports 1 and 2, denoted by terminals (a,b) and (c,d) , respectively. It has an impedance matrix Z with parameters denoted by Z<sub>ij</sub>. A 1Ω resistor is connected in series with the network at port 1 as shown in fig.2. The impedance matrix of the modified two-port network (shown as a dashed box) is<br/><p style=\"text-align:center\"><img src=\"./image/2portqz2.jpg\" style=\"width:450px;height:330px;\"></p>",
+            "q": "How can a first order lowpass filter can be converted into second order low pass filter",
             "a": [
-                {"option": "`[[Z_(11)+1, Z_(12)+1], [Z_(21), Z_(22)+1]]`", "correct": false},
-                {"option": "`[[Z_(11)+1, Z_(12)], [Z_(21), Z_(22+1)]]`", "correct": false},
-                {"option": "`[[Z_(11)+1, Z_(12)], [Z_(21), Z_(22)]]`", "correct": true},
-                {"option": "`[[Z_(11)+1, Z_(12)], [Z_(21)+1, Z_(22)]]`", "correct": false} // no comma here
+                {"option": "`By adding LC network`", "correct": false},
+                {"option": "`By adding RC network`", "correct": true},
+                {"option": "`By adding RC||LC network`", "correct": false},
+                {"option": "`none`", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 	{// Question 3
-            "q": "A two port device is defined by the following pair of equations:<br>          `i_(1)=2V_(1)+V_(2)      and i_(2)=V_(1)+V_(2)`<br>It's impedance parameters (Z<sub>11</sub>, Z<sub>12</sub>, Z<sub>21</sub>, Z<sub>22</sub>) are given by",
+            "q": "Find the gain and phase angle of the 2nd order low pass filter where, passband gain of the filter is 5.Frequency and high cut-off frequency of the filter are 3000Hz and 1KHz.",
             "a": [
-                {"option": "(1,-1,-1,2)", "correct": true},
-                {"option": "(2,1,1,1)", "correct": false},
-                {"option": "(1,1,1,2)", "correct": false},
-                {"option": "(2,-1,-1,1)", "correct": false} // no comma here
+                {"option": "Gain magnitude=-1.03dB,Angle=63.32(in degree)", "correct": false},
+                {"option": "Gain magnitude=-5.19dB,Angle=71.56(in degree)", "correct": true},
+                {"option": "Gain magnitude=-4.19dB,Angle=90(in degree)", "correct": false},
+                {"option": "None", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 4
-            "q": "The parameters of the circuit shown in the fig.3 are R<sub>i</sub>=1MΩ,R<sub>o</sub>=10, A=10<sup>6</sup> V/V. If V<sub>i</sub>=1UV, the output voltage, input impedance and output impedance respectively are:<br/><p style=\"text-align:center\"><img src=\"./image/2portqz4.jpg\" style=\"width:450px;height:260px;\"></p>",
+            "q": "The pass band voltage gain of a second order low pass butter worth filter is",
             "a": [
-                {"option": "1V, 0, 10Ω", "correct": false},
-                {"option": "1V, 0, &#8734;", "correct": false},
-				{"option": "1V, &#8734;, 10Ω", "correct": true},
-                {"option": "10V, &#8734;, 10Ω", "correct": false} // no comma here
+                {"option": "1.586", "correct": true},
+                {"option": "8.32", "correct": false},
+				{"option": "0.586", "correct": false},
+                {"option": "0.707", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 5
-            "q": "It's given that a network satisfies reciprocity, then pick the possible parameters of the network:",
+            "q": "Frequency scaling is done using",
             "a": [
-                {"option": "`H=[[2, -1], [1, 1/3]]`", "correct": true},
-                {"option": "`ABCD=[[&#8730;3, 1/2], [&#8730;2, &#8730; 3]]`", "correct": false},
-				{"option": "`Z=[[11, 3], [-3, 9]]`", "correct": false},
+                {"option": "Standard Capacior", "correct": true},
+                {"option": "Varying Capacitor", "correct": false},
+				{"option": "Standard resistance", "correct": false},
                 {"option": "None of these", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 6
-            "q": "It's given that a network satisfies symmetry, then pick the possible parameters of the network:",
+            "q": "A second order low pass filter is given an input frequency of 30KHz and produce an output having phase angle of 79 degree.Determine the pass band gain of the filter.",
             "a": [
-                {"option": "`Z=[[2, 1], [1, 1/3]]`", "correct": false},
-                {"option": "`Y=[[3, 1], [1/3, 2]]`", "correct": false},
-				{"option": "`ABCD=[[1, -1/3], [-1/3, 1/3]]`", "correct": false},
-                {"option": "`H=[[&#8730;2, 1], [1, &#8730;2]]`", "correct": true} // no comma here
+                {"option": "11dB", "correct": false},
+                {"option": "89.11dB", "correct": false},
+				{"option": "46.78dB", "correct": true},
+                {"option": "None", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
-		{// Question 7
-            "q": "Y parameters of a network are given as `[[Y_11, Y_12], [y_21, Y_22]]`. It's given that network satisfies reciprocity and symmetry and |Y|=2. Then which of the following is possible admittance matrix:",
-            "a": [
-                {"option": "`[[2, 1/3], [1/3, 2]]`", "correct": false},
-                {"option": "`[[&#8730;6, 2], [2, &#8730;6]]`", "correct": true},
-				{"option": "`[[3, -1], [-1, 3]]`", "correct": false},
-                {"option": "None of these", "correct": false} // no comma here
-            ],
-            "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
-            "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
-        },
+		
     ]
 };
