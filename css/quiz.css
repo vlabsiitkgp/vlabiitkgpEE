@@ -1,0 +1,19 @@
+/* List styling */
+.questionList, .questionList ul {
+    margin-top: 0;
+    padding-left: 1em;
+    list-style-type: none;
+}
+.questionList li:before {
+    position: absolute;
+    margin-left: -1.3em;
+    font-weight: bold;
+}
+.questionList li.tick:before {
+    content: "\2713";
+    color: darkgreen;
+}
+.questionList li.cross:before {
+    content: "\2717";
+    color: crimson;
+}
