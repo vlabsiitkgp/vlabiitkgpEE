@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Experiment-Voltage Doubler</title>
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="AC_RunActiveContent.js" language="javascript"></script>
+<script src="doublerJS2.js" language="javascript"></script> 
+<script src="VD.js" language="javascript"></script> 
+<!--<script type="text/javascript" language="javascript" src="sources/jscharts.js"></script>-->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style>
+
+.spancss{
+background-color:#F5F5DC;
+width:100px;
+height:20px;
+border:2px solid black;
+padding:1px;
+text-align:center;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width:0px;
+  max-width :610px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+</style>
+
+</head>
+<body bgcolor="powderblue" text="#000000">
+<!--<div align="right"><a href="http://vlabs.iitkgp.ac.in/vhv/" title="click to go to home page" target="_self"><span class="style4">Home</span></a><br />
+</div>-->
+<div align="right"><a  href="instruction.html" title="click to see INSTRUCTIONS" target="_self"><b><span class="style4">INSTRUCTIONS</span></b></a><br />
+</div>
+<div align="center" class="style1" id="div1">
+  <h3><big>Voltage Doubler</big></h3>
+</div>
+<br />
+<div id= "anim">
+	<img id="img1" src="images/VD1.png " style="position:absolute; top:250px; left:150px;" />
+	
+	</div>
+
+<div id="tr1" style="position:absolute;top:270px;left:580px  ">
+  <!--<p>R<sub>i</sub>= 4.7KΩ  , F<sub>o</sub>= 15.915KHz </p>-->
+  <table id="myTable" border="1">
+   <tr>
+   <th> Sl. No.</th>
+   <th>Load Current(uA)</th>
+   <th>Frequency(Hz)</th>
+   <th>C<sub>1</sub>(uF)</th>
+  <th>C<sub>2</sub>(uF)</th>
+  <th>Ripple(mV)</th> 
+  </tr>
+</table>
+  </div>
+	
+ <input type ="button"  value="TableShow" onclick=" tabled()" style="text-align:center; cursor: pointer; background-color:#158FC2;border-radius:20px; width:90px; height:28px; font-size:15px; position:absolute; top:230px; left:930px;border-shadow:2px">	
+	
+<div id="chartContainer" style="display:none;position:absolute;top:600px;left:600px;height: 370px; width: 55%;z-index:1;"></div>
+
+<div id="chartContainer2" style="display:none;position:absolute;top:600px;left:600px;height: 370px; width: 55%;z-index:1;"></div>
+
+<div id="chartContainer3" style="display:none;position:absolute;top:600px;left:600px;height: 370px; width: 55%;z-index:1;"></div>
+
+<!-- Dropdown Hover...........-->
+	<!--<div class="dropdown" style="position:abolute;top:-110px;left:2000px ">
+  <p style="color:#B3061D"><b>INSTRUCTIONS</b></p>
+  <div class="dropdown-content" style="color:#025167">
+  <ol type="1">
+
+<li>When the page gets loaded a button with value "Click to display the functioning 
+                                    of Voltage Doubler" is displayed.</li>
+
+                                <li>The button is clicked to display the functioning of the Voltage Doubler.</li>
+
+                                <li>The input parameters are Current (in &micro;A), Frequency (in Hz), Capacitance1 
+                                    (in &micro;F) and Capacitance2 (in &micro;F) and these are associated with corresponding
+                                    text boxes which are displayed.</li>
+
+                                <li>The input values of each of these variables to be entered should be 
+                                    within the range specified.</li>
+
+                                <li>Upon entering the values of all the variables, the Calculate Ripple button is
+                                    clicked to display the computed ripple value .This calculation of ripple is 
+                                    for a set of values of Current (in &micro;A), Frequency (in Hz), Capacitance1 
+                                    (in &micro;F) and Capacitance2 (in &micro;F).</li>
+
+                                <li>In addition, the variation of one of the above parameters 
+                                    on the ripple voltage can also be studied.</li>
+
+                                <li>The parameters that have to be varied are shown to the user on 
+                                    the right pane. The user clicks the corresponding parameter from the Vary parameter box.Only ONE
+                                    parameter is varied while the others are kept constant during the experiment.</li>
+
+                                <li>To begin with the user enters the appropriate values of all the parameters
+                                    and calculates the ripple as mentioned in step 5.</li>
+
+                                <li>Step 5 is repeated by changing the value of the desired parameter only. 
+                                    The other parameters which are constant shouldnot be edited.</li>
+
+                                <li>During varying Capacitance values C1 is only varied,C2 is varied just to keep the C1/C2 ratio between
+								1-2 and to always maintain C1>C2</li>
+
+                                <li>After calculating the ripple each time, click the Tableshow button to observe the values in a tabulated way.</li>
+
+                                <li>In the"Graph Secton"menu click the appropriate option to show the graph for 
+                                    the parameter chosen versus ripple calculated.</li>
+
+                                <li>These steps can be repeated for other parameters.</li>
+
+
+
+
+</ol>
+  </div>
+  </div>-->
+
+
+
+
+
+
+
+
+<table width="1160" border="1" align="center">
+<tr><td colspan="4" height="15"><div class="hide" id="intrtxt"></div></td></tr>
+
+
+<tr><td height="81" colspan="4"><table width="1151">
+
+  <tr>
+  <td id="td1" class="hide" width = "175" height="49"><span class="style5">Enter load current value(I)</span>
+    <input type="text" name="txt1" id="txt1" size="6" value="0" />
+&micro;A<div id="divtxt1"></div>
+    </td>
+<td class="hide" id="td2" width = "164" height="49"><span class="style5">Enter Frequency Value(f)</span>
+  <input type="text" name="txt2" id="txt2" size="7" value="0" />Hz<div id="divtxt2"></div></td>
+<td class="hide" id="td3" width = "156" height="49"><span class="style5">Enter Capacitance</span><span class="style5">C<sub>1</sub> value</span>
+  <input type="text" name="txt3" id="txt3" size="7" value="0" />
+&micro;F<div id="divtxt3"></div>
+  </td>
+<td class="hide"  id="td4" width = "151" height="49"><span class="style5">Enter Capacitance C<sub>2</sub> value</span>
+  <input type="text" name="txt4" id="txt4" size="7" value="0" />&micro;F<div id="divtxt4"></div></td>
+<!--<td class="hide"  id="td6" width = "110" height="49"><span class="style5">Choose Ratio (C1/C2) value</span>
+  <div id="divratio"></div><div id="divtxt6"></div></td>-->
+<td align="justify"  id="td5" width = "192" height="49"><span class="style5">Calculated value of Ripple</span>
+  <input type="text" name="txt5" id="txt5" size="7" value="0" />
+  mV</td>
+<td align="center" width = "108" height="49">
+  <div id="divbtn1"><input  type="button" value="Calculate Ripple" name="btn1" id="btn1" onclick="calculateripple()" /></div></td>
+<td align="center" width = "58" height="49">
+  <input  type="button" value="Restart" name="btn2" id="btn2" onclick="reload1();" /></td>
+</tr></table></td></tr>
+	<!--<tr><td colspan="7"><div id="txtdiv"></div></td></tr>-->
+  <tr>
+    <td align="center" width="1300"><table><tr align="center" valign="middle"><td width="634" height="317">
+    </td><input id="cnclbtn" type="button" onclick="CancelRun()" value="Stop" /></tr><tr>
+	
+	<td><input style="position:relative;left:-100px;"id="animbtn" type="button" onclick="RunAnim()" value="Click to display the functioning of voltage Doubler" />
+</td></tr></table></td>
+  <td width="237" height="372" valign="top"><div  id="divtxt5">Range for Input parameters:<br />
+  Current(I):0.1&micro;A-100&micro;A<br />
+  Frequency(f):50Hz-5000Hz<br />
+  CapacitanceC<sub>1</sub>:0.1&micro;F-2&micro;F<br />
+  CapacitanceC<sub>2</sub>:0.1&micro;F-2&micro;F<br />
+  </div> 
+  <div style="position:absolute"><select  id="varyparamsel" onclick="displayrange(this)"><option value="1" SELECTED >Vary Current</option>
+  <option value="2" >Vary Frequency</option><option value="3" >Vary Capacitance1</option><!--<option value="4">Vary Capacitance2</option>--></select>
+  <!--<input  type="button" value="choose parameter to vary" id="varyparambtn" onclick="chooseparam()" /></div>
+  <div id="graphdiv"></div>-->
+  <input style="display:none" type ="range" id="range1" min="0.1" max="100" value="0.1" step="0.1" onchange="CLCURR()" />
+  <input style="display:none" type ="range" id="range2" min="50" max="5000" value="50" step="50" onchange="CFREQ()" />
+  <input style="display:none" onmouseover="showspan1()" onmouseout="hidespan1()" type ="range" id="range3" min="0.1" max="2" value="0.1" step="0.1" onchange="CC1()" />
+    <input style="display:none" onmouseover="showspan2()" onmouseout="hidespan2()" type ="range" id="range4" min="0.1" max="2" value="0.1" step="0.1" onchange="CC2()" />
+   <span style="display:none" class="spancss" id="span1">Change C1</span>
+   <span style="display:none" class="spancss" id="span2">Change C2</span>
+   
+    <select style="background-color:#F5F5DC" id="showplot" onclick="displayplot(this)"><option value="-1" SELECTED >Graph Section</option><option value="1" >Load Current Vs. Ripple</option>
+  <option value="2" >Frequency Vs. Ripple</option><option value="3" >Capacitance1 Vs. Ripple</option></select>
+   </td></tr> 
+   
+   </div>
+  <!--<tr><td align="center"><div id="canvas"></div></td></tr></table>-->
+  
+  <script>
+  //circuit Animation code//
+  var arr = [];
+arr[0]= new Image();
+arr[0].src = "images/VD1.png";
+arr[1]= new Image();
+arr[1].src = "images/VD2.png";
+arr[2]= new Image();
+arr[2].src = "images/VD3.png";
+arr[3]= new Image();
+arr[3].src = "images/VD4.png";
+arr[4]= new Image();
+arr[4].src = "images/VD5.png";
+arr[5]= new Image();
+arr[5].src = "images/VD6.png";
+arr[6]= new Image();
+arr[6].src = "images/VD7.png";
+arr[7]= new Image();
+arr[7].src = "images/VD8.png";
+arr[8]= new Image();
+arr[8].src = "images/VD1.png";
+
+var i=0;
+var stop;
+function slide(){
+ document.getElementById("img1").src= arr[i].src;
+ i++; 
+ if(i==arr.length){
+  i=0;
+ }
+ stop=setTimeout(function(){ slide(); },400);
+ clearTimeout(81); 
+}
+function RunAnim(){
+//document.getElementById("img1").style.display="block";
+slide('img1',arr);
+
+}
+ function CancelRun(){
+ clearTimeout(stop);
+}
+  
+  
+  
+  </script> 
+
+  
+</body>
+</html>

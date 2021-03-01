@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Experiment-Voltage Doubler</title>
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="AC_RunActiveContent.js" language="javascript"></script>
+<script src="doublerJS2.js" language="javascript"></script> 
+<script type="text/javascript" language="javascript" src="sources/jscharts.js"></script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 18px;
+	color: #FFFFFF;
+}
+-->
+<!--
+.style6 {
+	font-size: 14px;
+	color:#009900;
+}
+-->
+<!--
+.style5 {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+-->
+<!--
+.style2{color:#009900; font-size:9px;}
+-->
+<!--
+.style3{color:#009900; font-size:9px;}
+-->
+.hide{visibility:hidden;}
+body{color:#FFFFFF; font-size:16px; font-weight:bold;}
+.style4 {color: #009900;}
+</style>
+</head>
+<body bgcolor="#330000" text="#000000">
+<div align="right"><a href="http://vlabs.iitkgp.ac.in/vhv/" title="click to go to home page" target="_self"><span class="style4">Home</span></a><br />
+</div>
+<div align="center" class="style1" id="div1">
+  <h3><big>Voltage Doubler</big></h3>
+</div>
+<br />
+<table width="1160" border="1" align="center">
+<tr><td colspan="4" height="15"><div class="hide" id="intrtxt"></div></td></tr>
+<tr><td height="81" colspan="4"><table width="1151">
+  <tr>
+  <td id="td1" class="hide" width = "175" height="49"><span class="style5">Enter load current value(I)</span>
+    <input type="text" name="txt1" id="txt1" size="6" />
+&micro;A<div id="divtxt1"></div>
+    </td>
+<td class="hide" id="td2" width = "164" height="49"><span class="style5">Enter Frequency Value(f)</span>
+  <input type="text" name="txt2" id="txt2" size="7" />Hz<div id="divtxt2"></div></td>
+<td class="hide" id="td3" width = "156" height="49"><span class="style5">Enter Capacitance</span><span class="style5">C<sub>1</sub> value</span>
+  <input type="text" name="txt3" id="txt3" size="7" />
+&micro;F<div id="divtxt3"></div>
+  </td>
+<td class="hide"  id="td4" width = "151" height="49"><span class="style5">Enter Capacitance C<sub>2</sub> value</span>
+  <input type="text" name="txt4" id="txt4" size="7" />&micro;F<div id="divtxt4"></div></td>
+<td class="hide"  id="td6" width = "110" height="49"><span class="style5">Choose Ratio (C1/C2) value</span>
+  <div id="divratio"></div><div id="divtxt6"></div></td>
+<td align="justify" class="hide" id="td5" width = "192" height="49"><span class="style5">Calculated value of Ripple</span>
+  <input type="text" name="txt5" id="txt5" size="7" />
+  mV</td>
+<td align="center" width = "108" height="49">
+  <div id="divbtn1"><input class="hide" type="button" value="Calculate Ripple" name="btn1" id="btn1" onclick="calculateripple()" /></div></td>
+<td align="center" width = "58" height="49">
+  <input class="hide" type="button" value="Restart" name="btn2" id="btn2" onclick="reload1();" /></td>
+</tr></table></td></tr>
+	<!--<tr><td colspan="7"><div id="txtdiv"></div></td></tr>-->
+  <tr>
+    <td align="center" width="908"><table><tr align="center" valign="middle"><td width="634" height="317">
+    
+<script language="javascript">
+	if (AC_FL_RunContent == 0) {
+		alert("This page requires AC_RunActiveContent.js.");
+	} else {
+		AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0','name','doubler','width','900','height','450','align','middle','id','doubler','src','doubler','quality','high','bgcolor','#330000','menu','false','allowscriptaccess','sameDomain','allowfullscreen','false','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','doubler' ); //end AC code
+	}
+</script>
+<noscript>
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" name="doubler" width="900" height="450" align="middle" id="doubler">
+    <param name="menu" value="false" />
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="doubler.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#330000" />	<embed src="doubler.swf" quality="high" bgcolor="#330000" width="900" height="450" name="doubler" align="middle" menu = "false" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+</noscript>
+ 
+    
+<!--<script language="javascript">
+    if (AC_FL_RunContent == 0) {
+		alert("This page requires AC_RunActiveContent.js.");
+	} else {
+		AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0','width','550','height','400','id','doubler','align','middle','src','doubler','quality','high','bgcolor','#330000','menu','false','name','doubler','allowscriptaccess','sameDomain','allowfullscreen','false','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','doubler' ); //end AC code
+
+	}
+</script>
+<noscript>
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="550" height="400" id="doubler" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" /><param name="menu" value="false" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="doubler.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#330000" />	<embed src="doubler.swf" quality="high" bgcolor="#330000" width="550" height="400" menu = "false" name="doubler" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+	</object>
+</noscript>-->
+
+</td></tr><tr><td align="center"><div align="center" id="divbtn"><!--<input id="flshbtn" type="button" onclick="showflash()" value="Click to display the functioning of voltage Doubler" />--></div>
+</td></tr></table></td>
+  <td width="237" height="372" valign="top"><div class="hide" id="divtxt5">Range for Input parameters:<br />
+  Current(I):0.1&micro;A-100&micro;A<br />
+  Frequency(f):50Hz-5000Hz<br />
+  CapacitanceC<sub>1</sub>:0.1&micro;F-2&micro;F<br />
+  CapacitanceC<sub>2</sub>:0.1&micro;F-2&micro;F<br />
+  </div> 
+  <div><select class="hide" id="varyparamsel" onchange="paramdisable()"><option></option><option>Vary Current</option>
+  <option>Vary Frequency</option><option>Vary Capacitance1</option> <!--<option>Vary Capacitance2</option>--></select>
+  <input class="hide" type="button" value="choose parameter to vary" id="varyparambtn" onclick="chooseparam()" /></div>
+  <div id="graphdiv"></div>
+  <div align="justify" id="txtdiv"></div>
+  <div>
+  <select class="hide" id="currentsel"><option></option></select><select class="hide" id="ripplesel1"><option></option></select><br />
+  <select class="hide" id="freqsel"><option></option></select><select class="hide" id="ripplesel2"><option></option></select><br />
+  <select class="hide" id="cap1sel"></select><select class="hide" id="ripplesel3"></select><br />
+  <select class="hide" id="cap2sel"><option></option></select><select class="hide" id="ripplesel4"><option></option></select><br />
+  </div> </td></tr> 
+  <tr><td align="center"><div id="canvas"></div></td></tr></table>
+</body>
+</html>

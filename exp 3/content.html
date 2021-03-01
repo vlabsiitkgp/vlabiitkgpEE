@@ -1,0 +1,279 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual High Voltage Laboratory</title>
+
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Virtual High Voltage Laboratory</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    Functioning of Voltage Doubler
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p class="heading-content">High Voltage DC is used in several applications in industries
+                                in equipments and Research. HV DC is also employed to transmit bulk power. That apart
+                                HVDC is used in testing of High Voltage Cables and as a source for charging 
+                                the Impulse Voltage and Current Generator. <br/><br/>
+
+                                The most usual way of Generating High Voltage DC is through
+                                rectification using a) Half wave b) Full wave c) Multiplier Circuits.
+                                In all these cases the AC input is taken from a High Voltage transformer.  </p><br/>
+
+
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">
+
+                            <p class="heading-content">
+                                The DC voltage produced by the half wave rectifier is
+                                less than the peak value of the Sine Wave. The size and 
+                                ratings of the capacitors and transformers become very large 
+                                if pure high voltage DC  is to be produced. Voltage Doublers  
+                                are used  when higher DC voltages are needed. A typical voltage
+                                doubler circuit due to Greinarcher is shown below:
+                            </p>
+
+                            <p class="content"><center><img style="width:235px;height:200px;" src="images/doubler.jpg" alt="" /></center></p><br/>
+
+                        <p class="heading-content">The capacitor C<sub>1</sub> is charged through rectifier D<sub>1</sub> to a voltage 
+                            +V<sub>max</sub> with polarity as shown in the figure during the negative half cycle. 
+                                During the positive half cycle as the voltage of the transformer rises to V<sub>hmax</sub>, 
+                                the potential of the other terminal of C<sub>1</sub> rises to 2V<sub>hmax</sub>. The capacitor C<sub>2</sub> is in
+                                turn charged through the Rectifier D<sub>2</sub> to 2V<sub>hmax</sub>.  Depending on the time constant 
+                                C<sub>2</sub>R<sub>L</sub> where R<sub>L</sub> is the Load Resistance, the output voltage will be less than 2V<sub>hmax</sub>. 
+                                The rectifiers are rated to a Peak Inverse Voltage of 2V<sub>hmax</sub> and it is preferable 
+                                that both C<sub>1</sub> & C<sub>2</sub> have the same rating to affect equal amount of charge transfer.
+                                The ripple content is straight away proportional to the load current.<br/><br/>
+
+                                Ripple is Calculated using the formula <strong>I/2*f[(1/C<sub>2</sub>)+(2/C<sub>1</sub>)].</strong></p>
+
+                            <br />
+
+
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="images/procedure.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p class="heading-content"><ul> 
+                                <li>To Study the functioning of Voltage Doubler.</li>
+                                <li>To Study the variation of ripple with respect to the parameters Current, 
+                                    Frequency and Capacitance Values.</li>
+
+                            </ul>
+
+                            </p>                            
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator
+                        </div>
+
+                        <div class="content" id="experiment-article-section-4-content">                            
+                            <p class="content">
+                            <a href ="./doubler/voltagedoublerEXP.html" target="_blank">Click Here To Perform The Experiment</a> 
+                            </p>                            
+                        </div>
+                    </section>
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="images/manual.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p class="heading-content"><ol>
+                                <li>When the page gets loaded a button with value "Click to display the functioning 
+                                    of Voltage Doubler" is displayed.</li>
+
+                                <li>The button is clicked to display the functioning of the Voltage Doubler.</li>
+
+                                <li>The input parameters are Current (in &micro;A), Frequency (in Hz), Capacitance1 
+                                    (in &micro;F) and Capacitance2 (in &micro;F) and these are associated with corresponding
+                                    text boxes which are displayed.</li>
+
+                                <li>The input values of each of these variables to be entered should be 
+                                    within the range specified.</li>
+
+                                <li>Upon entering the values of all the variables, the Calculate Ripple button is
+                                    clicked to display the computed ripple value .This calculation of ripple is 
+                                    for a set of values of Current (in &micro;A), Frequency (in Hz), Capacitance1 
+                                    (in &micro;F) and Capacitance2 (in &micro;F).</li>
+
+                                <li>In addition, the variation of one of the above parameters 
+                                    on the ripple voltage can also be studied.</li>
+
+                                <li>The parameters that have to be varied are shown to the user on 
+                                    the right pane. The user clicks the corresponding parameter from the Vary parameter box.Only ONE
+                                    parameter is varied while the others are kept constant during the experiment.</li>
+
+                                <li>To begin the user enters the appropriate values of all the parameters
+                                    and calculates the ripple as mentioned in step 5.</li>
+
+                                <li>Step 5 is repeated by changing the value of the desired parameter only. 
+                                    The other parameters which are constant shouldnot be edited.</li>
+
+                                <li>During varying, Capacitance values C1 is only varied,C2 is varied just to keep the C1/C2 ratio between
+								1-2 and to always maintain C1>C2</li>
+
+                                <li>After calculating the ripple each time, click the Tableshow button to observe the values in a tabulated way.</li>
+
+                                <li>In the"Graph Section"menu click the appropriate option to show the graph for 
+                                    the parameter chosen versus ripple calculated.</li>
+
+                                <li>These steps can be repeated for other parameters.</li>
+
+                                
+
+                            </ol>
+                            </p>    <br/>                        
+                        </div>
+                    </section>
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-6">
+                        <div class="icon" id="experiment-article-section-6-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="images/App.jpg"></div>
+                        <div class="heading" id="experiment-article-section-6-heading">
+                            Application
+                        </div>
+
+                        <div class="content" id="experiment-article-section-6-content">                           
+                            <p class="heading-content">Below are certain areas in which voltage doubler finds its place:<br/>
+                            <ul> 
+                                <li>High Voltage DC power supply for Impulse Generators.</li>                                
+                                <li>Used for performing gap breakdown studies of various geometries.</li> 
+
+                            </ul></p>                   
+                        </div>
+                    </section>
+                   
+                </div>
+            </article>
+			
+			<section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-6-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-6-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-6-content">                            
+                            <p>
+								<p>&nbsp;</p>
+								<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>A) Book Name:</b></span><br>
+									<p>High Voltage Engineering (C.L Wadhwa) </p>
+									
+									
+								<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>B) Video Lecture:</b></span><br>
+									<p><a href="http://www.infocobuild.com/education/audio-video-courses/electronics/BasicElectronics-Patil-IIT-Bombay/lecture-18.html" target="_blank">Click here for NPTEL Video Lecture</a></p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+									<p>&nbsp;</p>
+							</p>                            
+                        </div>
+                    </section>        
+                </div>
+			
+			
+			
+			
+			
+			<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2008-2016 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
