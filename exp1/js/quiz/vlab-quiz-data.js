@@ -1,6 +1,6 @@
 /*
  * 
- * Author: P K JANA
+ * Author: Piyali Chattopadhyay
  * IIT Kharagpur
  * 
  * Setup your quiz text and questions here

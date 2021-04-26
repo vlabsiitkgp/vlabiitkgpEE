@@ -9,7 +9,7 @@
 
 /*
  * 
- * Author: Piyali Chattopadhyay
+ * Author: P K JANA
  * IIT Kharagpur
  * 
  */
@@ -18,21 +18,21 @@ var i = 0;
 var resultArray = [];
 var questionCount = 0;
 
-function quizInitializeAllQuestion() {
-    document.getElementById("vqt-start").style.display = "none";    
+function quizInitializeAllQuestion2() {
+    document.getElementById("vpqt-start").style.display = "none";    
     var ansCount = 0;
     var questionOptions = "<form name=\"quiz\" method=\"post\" id=\"quiz\" onsubmit=\"return false\"><ul class=\"questionList\">";
-    questionCount = quizJSON.questions.length;
+    questionCount = quizJSON2.questions.length;
     for (var qc = 0; qc < questionCount; qc++) {
-        ansCount = quizJSON.questions[qc].a.length;
-        questionOptions = questionOptions + "<li id=\"question" + qc + "\" style=\"font-weight:bold;padding-top:20px;text-align:justify\">" + (qc + 1) + ". " + quizJSON.questions[qc].q + "<ul>";
+        ansCount = quizJSON2.questions[qc].a.length;
+        questionOptions = questionOptions + "<li id=\"question" + qc + "\" style=\"font-weight:bold;padding-top:20px;text-align:justify\">" + (qc + 1) + ". " + quizJSON2.questions[qc].q + "<ul>";
         for (var j = 0; j < ansCount; j++) {
-            questionOptions = questionOptions + "<li><input type = \"radio\" name = \"ans" + qc + "\" value = \"" + j + "\">" + quizJSON.questions[qc].a[j].option + "</li>";
+            questionOptions = questionOptions + "<li><input type = \"radio\" name = \"ans" + qc + "\" value = \"" + j + "\">" + quizJSON2.questions[qc].a[j].option + "</li>";
         }
         questionOptions = questionOptions + "</ul></li>";
     }
     questionOptions = questionOptions + "</ul><button class=\"submit\" onclick=\"return quizSubmit();\" type=\"submit\">Submit</button></form>";
-    document.getElementById("vlab-quiz-question-answer-options").innerHTML = questionOptions;
+    document.getElementById("vlab-prequiz-question-answer-options").innerHTML = questionOptions;
     dynamicMathConveter();
 }
 
@@ -54,30 +54,30 @@ function quizSubmit() {
     }
 }
 
-function quizInitialize() {
-    document.getElementById("vqt-start").style.display = "none";
+function quizInitialize2() {
+    document.getElementById("vpqt-start").style.display = "none";
     document.getElementById("vqt-next").style.display = "block";
-    questionCount = quizJSON.questions.length;
+    questionCount = quizJSON2.questions.length;
     if (i >= questionCount) {
         showResult();
         return;
     }
-    var ansCount = quizJSON.questions[i].a.length;
-    var questionOptions = "<p style=\"font-weight:bold;\">" + (i + 1) + ". " + quizJSON.questions[i].q + "</p>";
+    var ansCount = quizJSON2.questions[i].a.length;
+    var questionOptions = "<p style=\"font-weight:bold;\">" + (i + 1) + ". " + quizJSON2.questions[i].q + "</p>";
     for (var j = 0; j < ansCount; j++) {
-        questionOptions = questionOptions + "<p><input type = \"radio\" name = \"ans\" value = \"" + j + "\"><label>" + quizJSON.questions[i].a[j].option + "</label></p>";
+        questionOptions = questionOptions + "<p><input type = \"radio\" name = \"ans\" value = \"" + j + "\"><label>" + quizJSON2.questions[i].a[j].option + "</label></p>";
     }
-    document.getElementById("vlab-quiz-question-answer-options").innerHTML = questionOptions;
+    document.getElementById("vlab-prequiz-question-answer-options").innerHTML = questionOptions;
     dynamicMathConveter();
 }
 function quizNext() {
     resultArray[i] = document.querySelector('input[name="ans"]:checked').value;
     i = i + 1;
-    quizInitialize();
+    quizInitialize2();
 }
 
 function showResult() {
-    document.getElementById("vlab-quiz-question-answer-options").style.display = "none";
+    document.getElementById("vlab-prequiz-question-answer-options").style.display = "none";
     document.getElementById("vlab-quiz-result").style.display = "block";
     document.getElementById("vqt-next").style.display = "none";
     document.getElementById("vqt-try-again").style.display = "block";
@@ -85,45 +85,45 @@ function showResult() {
     var level = "";
     var fullresult = "";
     for (var i = 0; i < questionCount; i++) {
-        fullresult = fullresult + "<p><b>" + (i + 1) + ". " + quizJSON.questions[i].q + "</b></p>";
-        var ansCount = quizJSON.questions[i].a.length;
+        fullresult = fullresult + "<p><b>" + (i + 1) + ". " + quizJSON2.questions[i].q + "</b></p>";
+        var ansCount = quizJSON2.questions[i].a.length;
         var k = -1;
         for (var j = 0; j < ansCount; j++) {
-            fullresult = fullresult + "<p>(" + String.fromCharCode(97 + j) + ") " + quizJSON.questions[i].a[j].option + "</p>";
-            if (quizJSON.questions[i].a[j].correct === true)
+            fullresult = fullresult + "<p>(" + String.fromCharCode(97 + j) + ") " + quizJSON2.questions[i].a[j].option + "</p>";
+            if (quizJSON2.questions[i].a[j].correct === true)
                 k = j;
         }
-        if (quizJSON.questions[i].a[resultArray[i]].correct === true) {
+        if (quizJSON2.questions[i].a[resultArray[i]].correct === true) {
             resultCount++;
-            fullresult = fullresult + "<p> You have choosen option (" + String.fromCharCode(97 + parseInt(resultArray[i])) + "). The answer is correct." + quizJSON.questions[i].correct;
+            fullresult = fullresult + "<p> You have choosen option (" + String.fromCharCode(97 + parseInt(resultArray[i])) + "). The answer is correct." + quizJSON2.questions[i].correct;
         } else {
-            fullresult = fullresult + "<p> You have choosen option (" + String.fromCharCode(97 + parseInt(resultArray[i])) + "). The answer is incorrect. The correct option is (" + String.fromCharCode(97 + k) + ")." + quizJSON.questions[i].incorrect;
+            fullresult = fullresult + "<p> You have choosen option (" + String.fromCharCode(97 + parseInt(resultArray[i])) + "). The answer is incorrect. The correct option is (" + String.fromCharCode(97 + k) + ")." + quizJSON2.questions[i].incorrect;
         }
     }
     var resultPercent = (resultCount / questionCount) * 100;
     if (resultPercent >= 75) {
-        level = quizJSON.info.level1;
+        level = quizJSON2.info.level1;
     } else if (resultPercent >= 60) {
-        level = quizJSON.info.level2;
+        level = quizJSON2.info.level2;
     } else if (resultPercent >= 50) {
-        level = quizJSON.info.level3;
+        level = quizJSON2.info.level3;
     } else if (resultPercent >= 40) {
-        level = quizJSON.info.level4;
+        level = quizJSON2.info.level4;
     } else {
-        level = quizJSON.info.level5;
+        level = quizJSON2.info.level5;
     }
     document.getElementById("vlab-quiz-result").innerHTML = "<p> You have scored " + resultCount + " out of " + questionCount + ".</p><p>Your level is: " + level + "</p>" + fullresult;
     dynamicMathConveter()
 }
 
 function tryAgain() {
-    document.getElementById("vlab-quiz-question-answer-options").style.display = "block";
+    document.getElementById("vlab-prequiz-question-answer-options").style.display = "block";
     document.getElementById("vlab-quiz-result").style.display = "none";
     document.getElementById("vqt-next").style.display = "block";
     document.getElementById("vqt-try-again").style.display = "none";
     i = 0;
     resultArray = [];
-    quizInitialize();
+    quizInitialize2();
 }
 function dynamicMathConveter() {
     MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
