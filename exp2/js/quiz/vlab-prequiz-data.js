@@ -8,7 +8,7 @@
  * 
  */
 
-var quizJSON = {
+var quizJSON2 = {
     "info": {
         "name": "Test Your Knowledge!!",
         "main": "<p>Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!</p>",
