@@ -49,19 +49,42 @@
           enclosed together with a div element as shown below-->
 
                 <div id="experiment-article-sections">
-                    <!------------------------------- First section of the article---------------------------------->
-
-                    <section id="experiment-article-section-1">
+				
+				<!-------------------------- First section of the article---------------------------------------->
+					<section id="experiment-article-section-1">
                         <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+                        <div class="heading" id="experiment-article-section-1-heading">
+                           Pre Quiz
+                        </div>
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <div id="vlab-prequiz-wrapper">
+                                <p style="text-align:left; font-size:18px; font-weight:bold;">Test Your Knowledge!!</p><br/>
+                                <div id="vlab-prequiz-question-answer-options"></div>                                
+                                <br/>
+                                <div id="vlab-prequiz-trigger">
+                                    <button id="vpqt-start" onclick="quizInitializeAllQuestion2()" style="display: block;">Start</button>                                    
+                                </div>            
+                            </div>                      
+                        </div>
+                    </section>
+				
+				
+				
+                    <!------------------------------- Second section of the article---------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
                             <!-- Enclose the icon image of your lab -->
                             <img src="../images/theory.jpg"></div>
                         <!-- The heading for the section can be enclosed in a div tag. -->
 
-                        <div class="heading" id="experiment-article-section-1-heading">
+                        <div class="heading" id="experiment-article-section-2-heading">
                             Theory
                         </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
 
-                        <div class="content" id="experiment-article-section-1-content">                            
+                        <div class="content" id="experiment-article-section-2-content">                            
                             <p>
 								<span style="font-size: 21px; "><b>Objective: Experimental verification of Fourier Coefficients of a square wave Signal using passive network.</b></span>
 									<div>
@@ -80,19 +103,19 @@
                      </div>
 					 </div>
                     </section>
-                    <!-------------------------- Second section of the article---------------------------------------->
+                    <!-------------------------- Third section of the article---------------------------------------->
 
-                    <section id="experiment-article-section-2">
-                        <div class="icon" id="experiment-article-section-2-icon">
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
                             <!-- Enclose the icon image of your lab. -->
                             <img src="../images/procedure.jpg"></div>
                         <!-- The heading for the section can be enclosed in a div tag. -->
 
-                        <div class="heading" id="experiment-article-section-2-heading">
+                        <div class="heading" id="experiment-article-section-3-heading">
                             Procedure
                         </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
 
-                        <div class="content" id="experiment-article-section-2-content">                            
+                        <div class="content" id="experiment-article-section-3-content">                            
                         <figure style="text-align:center">
 									  <img alt="" src="js-simulator/images/circuit.png" style="width:50%;height:50%;"/>
 									  <figcaption>[Passive Circuit diagram]</figcaption>
@@ -121,18 +144,18 @@
   </ol>				
                         </div>
                     </section>
-                    <!-------------------------- Third section of the article---------------------------------------->
+                    <!-------------------------- Fourth section of the article---------------------------------------->
 
-                    <section id="experiment-article-section-3">
-                        <div class="icon" id="experiment-article-section-3-icon">
+                    <section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
                             <!-- Enclose the icon image of your lab. -->
                             <img src="../images/demo.jpg"></div>
 
-                        <div class="heading" id="experiment-article-section-3-heading">
+                        <div class="heading" id="experiment-article-section-4-heading">
                             Operating Environment
                         </div>
 
-                        <div class="content" id="experiment-article-section-3-content">                            
+                        <div class="content" id="experiment-article-section-4-content">                            
                             <p>
 									<h3><span style="color: rgb(153, 51, 102); ">Minimum System Requirement</span>:</h3>
 									<ul>
@@ -145,18 +168,18 @@
 							</p>                            
                         </div>
                     </section>
-                    <!-------------------------- Fourth section of the article---------------------------------------->
+                    <!-------------------------- Fifth section of the article---------------------------------------->
 
-                    <section id="experiment-article-section-4">
-                        <div class="icon" id="experiment-article-section-4-icon">
+                    <section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
                             <!-- Enclose the icon image of your lab.-->
                             <img src="../images/simulation.jpg"></div>
 
-                        <div class="heading" id="experiment-article-section-4-heading">
+                        <div class="heading" id="experiment-article-section-5-heading">
                             Simulator
                         </div>
 
-                        <div class="content" id="experiment-article-section-4-content">  
+                        <div class="content" id="experiment-article-section-5-content">  
 						<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>Pre-Requisite to run the Simulator:</b></span>
 							<p> <br>&nbsp&nbsp&nbsp The simulator for this experiment is designed based on JavaScript platform combined with HTML5 Canvas for graphics. So the users are recommended to use browsers with HTML5 compatible.</p> 					
                             <br> <br>
@@ -168,15 +191,15 @@
 							</p>                            
                         </div>
                     </section>
-                    <!-------------------------- Fifth section of the article---------------------------------------->
-					<section id="experiment-article-section-5">
-                        <div class="icon" id="experiment-article-section-5-icon">
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+					<section id="experiment-article-section-6">
+                        <div class="icon" id="experiment-article-section-6-icon">
                             <!-- Enclose the icon image of your lab.-->
                             <img src="../images/quizzes.jpg"></div>
-                        <div class="heading" id="experiment-article-section-5-heading">
+                        <div class="heading" id="experiment-article-section-6-heading">
                             Quiz
                         </div>
-                        <div class="content" id="experiment-article-section-5-content">                            
+                        <div class="content" id="experiment-article-section-6-content">                            
                             <div id="vlab-quiz-wrapper">
                                 <p style="text-align:left; font-size:18px; font-weight:bold;">Test Your Knowledge!!</p><br/>
                                 <div id="vlab-quiz-question-answer-options"></div>                                
@@ -187,17 +210,17 @@
                             </div>                      
                         </div>
                     </section>
-					<!-------------------------- Sixth section of the article---------------------------------------->
-                    <section id="experiment-article-section-6">
-                        <div class="icon" id="experiment-article-section-6-icon">
+					<!-------------------------- Seventh section of the article---------------------------------------->
+                    <section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-7-icon">
                             <!-- Enclose the icon image of your lab.-->
                             <img src="../images/reference.jpg"></div>
 
-                        <div class="heading" id="experiment-article-section-6-heading">
+                        <div class="heading" id="experiment-article-section-7-heading">
                             Reference
                         </div>
 
-                        <div class="content" id="experiment-article-section-6-content">                            
+                        <div class="content" id="experiment-article-section-7-content">                            
                             <p>
 								<p>&nbsp;</p>
 								<span style="background-color: rgb(255, 255, 255); font-size: 21px; "><b>A) Book Name:</b></span><br>
