@@ -44,7 +44,7 @@ function quizSubmit() {
             if (radio.checked) {
                 document.getElementById("question" + i).classList.remove("cross");
                 document.getElementById("question" + i).classList.remove("tick");
-                if (quizJSON.questions[i].a[radio.value].correct === true) {
+                if (quizJSON2.questions[i].a[radio.value].correct === true) {
                     document.getElementById("question" + i).classList.add("tick");
                 } else {
                     document.getElementById("question" + i).classList.add("cross");
