@@ -21,33 +21,33 @@ var questionCount = 0;
 function quizInitializeAllQuestion2() {
     document.getElementById("vpqt-start").style.display = "none";    
     var ansCount = 0;
-    var questionOptions = "<form name=\"quiz\" method=\"post\" id=\"quiz\" onsubmit=\"return false\"><ul class=\"questionList\">";
+    var questionOptions = "<form name=\"prequiz\" method=\"post\" id=\"prequiz\" onsubmit=\"return false\"><ul class=\"questionList\">";
     questionCount = quizJSON2.questions.length;
     for (var qc = 0; qc < questionCount; qc++) {
         ansCount = quizJSON2.questions[qc].a.length;
-        questionOptions = questionOptions + "<li id=\"question" + qc + "\" style=\"font-weight:bold;padding-top:20px;text-align:justify\">" + (qc + 1) + ". " + quizJSON2.questions[qc].q + "<ul>";
+        questionOptions = questionOptions + "<li id=\"prequestion" + qc + "\" style=\"font-weight:bold;padding-top:20px;text-align:justify\">" + (qc + 1) + ". " + quizJSON2.questions[qc].q + "<ul>";
         for (var j = 0; j < ansCount; j++) {
             questionOptions = questionOptions + "<li><input type = \"radio\" name = \"ans" + qc + "\" value = \"" + j + "\">" + quizJSON2.questions[qc].a[j].option + "</li>";
         }
         questionOptions = questionOptions + "</ul></li>";
     }
-    questionOptions = questionOptions + "</ul><button class=\"submit\" onclick=\"return quizSubmit();\" type=\"submit\">Submit</button></form>";
+    questionOptions = questionOptions + "</ul><button class=\"submit\" onclick=\"return prequizSubmit();\" type=\"submit\">Submit</button></form>";
     document.getElementById("vlab-prequiz-question-answer-options").innerHTML = questionOptions;
     dynamicMathConveter();
 }
 
-function quizSubmit() {
+function prequizSubmit() {
     for (var i = 0; i < questionCount; i++) {
         var radios = document.getElementsByName("ans" + i);
         for (var j = 0; j < radios.length; j++) {
             var radio = radios[j];
             if (radio.checked) {
-                document.getElementById("question" + i).classList.remove("cross");
-                document.getElementById("question" + i).classList.remove("tick");
+                document.getElementById("prequestion" + i).classList.remove("cross");
+                document.getElementById("prequestion" + i).classList.remove("tick");
                 if (quizJSON2.questions[i].a[radio.value].correct === true) {
-                    document.getElementById("question" + i).classList.add("tick");
+                    document.getElementById("prequestion" + i).classList.add("tick");
                 } else {
-                    document.getElementById("question" + i).classList.add("cross");
+                    document.getElementById("prequestion" + i).classList.add("cross");
                 }
             }
         }
