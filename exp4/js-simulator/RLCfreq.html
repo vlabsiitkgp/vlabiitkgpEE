@@ -1084,6 +1084,7 @@ table = document.getElementById("myTable");
 
 <!-------graph for frequency response --->
 function plot() {
+dataPoints = [];
 document.getElementById('chartContainer').style.display ="block";
 document.getElementById('chartContainer2').style.display="none";
 table= document.getElementById('myTable');
@@ -1109,7 +1110,7 @@ table= document.getElementById('myTable');
             logarithmic: true, 
 		title: "Frequency(Hz)",
 		titleFontColor: "black",		
-		gridColor:"lightblue",
+		gridColor:"black",
 		gridThickness: 2,
 		lineThickness: 1,
 		//maximum:100500,
@@ -1120,6 +1121,7 @@ table= document.getElementById('myTable');
         data: [
             {
                 type: "line",
+				color: "#0DB0AE",
                 dataPoints: dataPoints
             }
         ]
@@ -1160,7 +1162,7 @@ table= document.getElementById('myTable');
             logarithmic: true, 
 		title: "Frequency(Hz)",
 		titleFontColor: "black",		
-		gridColor:"lightblue",
+		gridColor:"black",
 		gridThickness: 2,
 		lineThickness: 1,
 		//maximum:100500,
@@ -1171,6 +1173,7 @@ table= document.getElementById('myTable');
         data: [
             {
                 type: "line",
+				color:"#CA075C",
                 dataPoints: dataPoints
             }
         ]

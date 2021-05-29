@@ -111,24 +111,27 @@
 									
 									<b>Active second order Sallen Key Low pass filters(Butterworth): </b>which are also referred to as VCVS filters, because the op-amp is used as a Voltage Controlled Voltage Source amplifier, are another important type of active filter design because along with the active first order RC filters we looked at previously, 
 									higher order filter circuits can be designed using them.we can define second order filters as simply being: “two 1st-order filters cascaded together with amplification”.
-									The Sallen-Key filter design is one of the most widely known and popular 2nd order filter designs, requiring only a single operational amplifier for the gain control and four passive RC components to accomplish the tuning.Fig 3 shows a 2nd order filter circuit with R1=R2=10KΩ, C1=C2=1000pF, Feedback Resistor RF=2.7KΩ,Ri=4.7KΩ(as used in our simulator circuit)</br> 
+									The Sallen-Key filter design is one of the most widely known and popular second order filter designs, requiring only a single operational amplifier for the gain control and four passive RC components to accomplish the tuning.Fig 3 shows a second order filter circuit with R1=R2=10KΩ, C1=C2=1000pF, Feedback Resistor RF=2.7KΩ,Ri=4.7KΩ(as used in our simulator circuit)</br> 
 									
 									<img style="width:30%;height:30%;text-align:center;position:relative;top:50px;left:50px;" src="2ndorder.png"  >
-									<figcaption style="position:relative;top:50px;left:50px;font-size:12px;">[Fig 3:Active Low pass 2nd order Filter Circuit diagram]</figcaption></br>
+									<figcaption style="position:relative;top:50px;left:50px;font-size:12px;">[Fig 3:Active Low pass second order Filter Circuit diagram]</figcaption></br>
 									
 									<img style="width:30%;height:30%;text-align:center;width:32%;height:32%;position:relative;top:-200px;left:530px;" src="filter-opamp77.gif"  >
-									<figcaption style="position:relative;top:-200px;left:530px;font-size:12px;">[Fig 4:Active 2nd order Filter diagram ,Gain,Cutoff Frequency]</figcaption></br>
+									<figcaption style="position:relative;top:-200px;left:530px;font-size:12px;">[Fig 4:Active second order Filter diagram ,Gain,Cutoff Frequency]</figcaption></br>
 									
-								A typical circuit diagram of a 2nd order Sallen key low pass filter is shown in Figure. With R1 = R2 = R and C1 = C2 = C ,the transfer function between the input and the output can be expressed as :</br>
-								(Vo(s))/(V1(s))=K/(1+(3-K)RCs+〖(RCs)〗^(2  ) ) Where K = 1+RF/Ri</br> The above expression clearly shown a low pass characteristics of the filter with
-                                d.c gain = K, cut off frequency F<sub>o</sub>=1/2πRC and the Q-factor, Q = 1/(3-K)</br>
-								Generally, for 2nd order butter worth filter the Q value is 0.707. and gain should be K~1.586.The frequency response of the Butterworth Filter approximation function is also often referred to as “maximally flat” (no ripples) response because 
+								A typical circuit diagram of a second order Sallen key low pass filter is shown in Figure3. With R1 = R2 = R and C1 = C2 = C ,the transfer function between the input and the output can be expressed as :</br>
+								
+								<img style="width:40%;height:40%;text-align:center;position:relative;top:50px;left:50px;" src="image/CE.png"  ><br/><br/><br/><br/>
+								
+								
+								</br>
+								Generally, for second order butter worth filter the Q value is 0.707. and gain should be K~1.586.The frequency response of the Butterworth Filter approximation function is also often referred to as “maximally flat” (no ripples) response because 
 								the pass band is designed to have a frequency response which is as flat as mathematically possible from 0Hz (DC) until the cut-off frequency at -3dB with no ripples. Higher frequencies beyond the cut-off point rolls-off down to zero in the stop band at -40dB/decade .
 								This is because it has a “quality factor”, “Q” of just 0.707</br>The output voltage gain is given by:
 								| Vo(s)|= (K * Vin)/√(1+f/fc)^4
 								
 								<img style="width:50%;height:50%;text-align:center;position:relative;top:20px;left:150px;" src="freq.jpg">
-								<figcaption style="text-align:center;position:relative;top:-60px;left:50px;font-size:12px;">[Fig 5: Frequency Response of 2nd order Butterworth Filter]</figcaption>
+								<figcaption style="text-align:center;position:relative;top:-60px;left:50px;font-size:12px;">[Fig 5: Frequency Response of second order Butterworth Filter]</figcaption>
  
 
                      </p>					
@@ -150,7 +153,7 @@
                         <div class="content" id="experiment-article-section-3-content">                            
                         <figure style="text-align:center">
 									  <img alt="" src=" Low-pass-_Active_2nd_order-removebg.png" style="width:50%;height:50%;"/>
-									  <figcaption>[Main Circuit diagram of 2nd order Active Low Pass Filter]</figcaption>
+									  <figcaption>[Main Circuit diagram of second order Active Low Pass Filter]</figcaption>
 									</figure>    
 						 <ol type="1">
   <li>Connect the circuit elements as mentioned below</br> 1-2 ,3-4 ,5-6, 6-7, 8-9, 10-11, 10-12, 9-13, 14-17, 17-18, 3-15, 16-17.(ex:-Drag from 1 and click on 2.Connecting points are given in simulation tab)connection should be proper such that it implies the above circuit.</li></br>
@@ -160,18 +163,23 @@
   <li> Obtain the cut off frequency F<sub>o</sub> and the Q-factor for the component values shown in Fig.(Ri=4.7KΩ)by clicking the Calculate button &
   Verify that the circuit corresponds to a low pass Butter worth filter where the Q-factor =1/√2,Where the input voltage is 3V Sinusoidal.</li><br/>
   
-<li>Switch on the oscilloscope by clicking "ON" button & click twice the Sine wave button to apply 3V sinusoidal voltage as input & click on the"Output" button to observe the output waveform with amplified output(V0).Channel & Channel2 button shows the input & output signals respectively,Dual, shows both of them. </li><br/> 
+<li>Switch on the oscilloscope by clicking "ON" button & click twice the Sine wave button to apply 3V sinusoidal voltage as input & click on the"Output" button to observe the output waveform with amplified output(Vo).Channel & Channel2 button shows the input & output signals respectively,Dual, shows both of them. </li><br/> 
 
 
 <li>Change the Frequency of input signal by the Frequency_Changer button for the values F<sub>o</sub>/10, F<sub>o</sub>/2, F<sub>o</sub>, 2F<sub>o</sub>,10F<sub>o</sub> & observe the corresponding output voltage signal.</li><br/>
 
 <li><b>Frequency_Changer :</b>Here the value of F<sub>o</sub>=15.915KHz or 15915Hz(according to the Main circuit).By default the value of frquency will come 1591Hz or 1.591KHz i.eF<sub>o</sub>/10.
 First double click this button exactly to change the frequency value F<sub>o</sub>/2 i.e. 7957Hz,then single click to obtain F<sub>o</sub>.Again click to have
-2F<sub>o</sub>=31830Hz & single click last time to have 10F<sub>o</sub>=159150Hz.</li>
+2F<sub>o</sub>=31830Hz & single click last time to have 10F<sub>o</sub>=159150Hz.</li></br>
 
+<li>Click on 'TableShow' button to see observation table each time after observing the output value. for Ex: the first frequency is 1.591KHz ,click on 'Sine Wave'
+button to see the input signal with frequency 1.591KHz,then click on 'Output' button to see the output voltage wave form and to have the magnitude value of Vo.
+Now click on 'TableShow' button to take the first reading.After that change the frequency as said earlier and take the corresponding observations.
+After taking 5 readings click on 'Plot' button to see the frequency response plot(Gain(dB)vs.Frequency(KHz)).</li></br>
+ 
 <li>Switch off the oscilloscope</li><br/>
-<li>Click on Table button to see observation Table & Plot button to see the frequency response plot(Gain(dB)vs.Frequency(KHz)).Click on Clear button to clear datas.</li><br/>
-<li>Set the value of Ri=10KΩ,Click on Calculate button to see the change in Q value.Repete the above steps.</li>
+<li>Click on Clear button to clear datas.</li><br/>
+<li>Set the value of Ri=10KΩ,Click on Calculate button to see the change in Q value.Repeat the above steps.</li>
  
   </ol>	
 							
