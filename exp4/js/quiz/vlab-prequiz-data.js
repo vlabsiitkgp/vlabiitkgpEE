@@ -23,9 +23,9 @@ var quizJSON2 = {
         {// Question 1
             "q": "If the value of C in a series RLC circuit is decreased,the resonant frequency,",
             "a": [
-                {"option": "`Is not affected`", "correct": false},
+                {"option": "`Has no affect`", "correct": false},
                 {"option": "`Increases`", "correct": true},
-                {"option": "`Is reduced to zero`", "correct": false},
+                {"option": "`Is zero`", "correct": false},
                 {"option": "`Decreases`", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
@@ -53,22 +53,22 @@ var quizJSON2 = {
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 4
-            "q": "In a series RLC circuit the phase difference between the current in the Inductor and in the resistor is,",
+            "q": "In a series RLC circuit the phase difference between the current in the Inductor and in the resistor (in Degree) is,",
             "a": [
-                {"option": "90^0", "correct": false},
-                {"option": "0^0", "correct": true},
-				{"option": "180^0", "correct": false},
+                {"option": "90", "correct": false},
+                {"option": "0", "correct": true},
+				{"option": "180", "correct": false},
                 {"option": "None", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 5
-            "q": "In a series RLC circuit the phase difference between the current in the capacitor and in the inductor is,",
+            "q": "In a series RLC circuit the phase difference between the current in the capacitor and in the inductor(in Degree) is,",
             "a": [
-                {"option": "90^0", "correct": false},
-                {"option": "0^0", "correct": true},
-				{"option": "180^0", "correct": false},
+                {"option": "90", "correct": false},
+                {"option": "0", "correct": true},
+				{"option": "180", "correct": false},
                 {"option": "None", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
