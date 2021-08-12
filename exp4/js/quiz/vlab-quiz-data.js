@@ -44,35 +44,35 @@ var quizJSON = {
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 3
-            "q": "In a series RLC circuit the phase difference between the current in the capacitor and in the resistor is,",
+            "q": "In a series RLC circuit the phase difference between the current in the capacitor and in the resistor(in Degree) is,",
             "a": [
-                {"option": "90^0", "correct": false},
-                {"option": "0^0", "correct": true},
-				{"option": "180^0", "correct": false},
+                {"option": "90", "correct": false},
+                {"option": "0", "correct": true},
+				{"option": "180", "correct": false},
                 {"option": "None", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		{// Question 4
-            "q": "In a series RLC circuit the phase difference between the current in the circuit and in the voltage across the resistor is,",
+            "q": "In a series RLC circuit the phase difference between the current in the circuit and in the voltage across the resistor(in Degree) is,",
             "a": [
-                {"option": "90^0", "correct": false},
-                {"option": "0^0", "correct": true},
-				{"option": "180^0", "correct": false},
-                {"option": "360^0", "correct": false} // no comma here
+                {"option": "90", "correct": false},
+                {"option": "0", "correct": true},
+				{"option": "180", "correct": false},
+                {"option": "360", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
         },
 		
         {// Question 5
-            "q": "In a series RLC circuit the phase difference between the current in the circuit and in the voltage across the inductor is,",
+            "q": "In a series RLC circuit the phase difference between the current in the circuit and in the voltage across the inductor(in Degree) is,",
             "a": [
-                {"option": "0^0", "correct": false},
-                {"option": "90^0", "correct": true},
-				{"option": "180^0", "correct": false},
-                {"option": "45^0", "correct": false} // no comma here
+                {"option": "0", "correct": false},
+                {"option": "90", "correct": true},
+				{"option": "180", "correct": false},
+                {"option": "45", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p><span>ERRRR!</span> What planet Earth are <em>you</em> living on?!?</p>" // no comma here
