@@ -23,10 +23,10 @@ var quizJSON2 = {
         {// Question 1
             "q": "A sine wave whose frequency is some integer multiple of a fundamental sine wave is called,",
             "a": [
-                {"option": "`Complex wave`", "correct": false},
+                {"option": "`Complex_wave`", "correct": false},
                 {"option": "`Square wave`", "correct": false},
                 {"option": "`Harmonic`", "correct": true},
-                {"option": "`Digital pulses`", "correct": false} // no comma here
+                {"option": "`Digital_pulses`", "correct": false} // no comma here
             ],
             "correct": "<p><span>Good Job!</span> You must be very observant!</p>",
             "incorrect": "<p>Try again.</p>" // no comma here
