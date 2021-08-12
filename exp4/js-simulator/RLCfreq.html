@@ -108,7 +108,7 @@
   <ol type="1">
   <li>Connect the circuit elements as mentioned below</br> 1-3 ,4-5 ,8-6, 6-10, 9-11, 2-7, 7-9(ex:-Drag from 1 and click on 3.)</li><br/>
   
-  <li> 3 volt p-p sinusoidal voltage is applied at the input.Put R=200Ω initially ,L=0.1H, C=0.1uF.</li><br/>
+  <li> 3 volt p-p sinusoidal voltage is applied at the input.Put R=200ohm initially ,L=0.1H, C=0.1uF.</li><br/>
   
   <li>Switch on the oscilloscope by clicking "ON" button & click twice the Sine wave button for input signal & click on the"Output" button to observe the output.Channel & Channel2 button shows the input & output signals respectively. Dual, shows both of them. </li> <br/>
 
@@ -124,9 +124,9 @@ Again if in any case the input signal comes as a straight line, decrease the Tim
 
   <li>Click on 'GainPlot' button to see the frequency response plot(Gain(dB)vs.Frequency(Hz))& click on the 'Phaseplot'button to see the corresponding phase response.Click on Clear button to clear datas.</li><br/>
 
-  <li>Switch off the oscilloscope.Change 'R' value by increasing the rheostat to increase the value of ζ and observe different results for ζ = (0.1,0.2,0.3,0.5,0.7).</li><br/>
+  <li>Switch off the oscilloscope.Change 'R' value by increasing the rheostat to increase the value of ζ and observe different results for damping ratio &#950; = (0.1,0.2,0.3,0.5,0.7).</li><br/>
  
-  <li> From the Gain plots the maximum gain,-3dB frequency can be observed for different ζ .</li> 
+  <li> From the Gain plots the maximum gain,-3dB frequency can be observed for different &#950; .</li> 
   
   </ol>
   </div>
@@ -135,14 +135,14 @@ Again if in any case the input signal comes as a straight line, decrease the Tim
   <input type="number" name="R" value="200" min="200" max="1600" step="200"  id="R" style="position:absolute; top:30px;  left:740px; width:55px;"readOnly="readOnly"/>
   <input type="number" name="L" value="0.1" min="0" max="20"  id="L" style="position:absolute; top:150px;  left:900px; width:50px"readOnly="readOnly"/>
   <input type="number" name="C" value="0.1" min="0" max="1050" id="C" style="position:absolute; top:200px;  left:950px; width:50px"readOnly="readOnly" />
-  <input type="number" name="ζ" value="0.1" min="0.1" max="0.8" step="0.1"  id="ζ" style="position:absolute; top:375px;  left:1100px; width:50px;"readOnly="readOnly"/>
+  <input type="number" name="zeta" value="0.1" min="0.1" max="0.8" step="0.1"  id="zeta" style="position:absolute; top:375px;  left:1100px; width:50px;"readOnly="readOnly"/>
   
   <!--<p style="position:absolute; top:90px;  left:1085px"><b>R</b></p>-->
   <p style="position:absolute; top:80px;  left:930px"><b>L</b></p><!--- Input Boxes-->
   <!--<p style="position:absolute; top:350px;  left:1085px"><b>C </b></p>-->
-  <p style="position:absolute; top:360px;  left:1085px"><b>ζ </b></p>
+  <p style="position:absolute; top:360px;  left:1085px"><b>&#950; </b></p>
   
-	<p style="position:absolute; top:20px;  left:800px"><b>Ω</b></p>
+	<p style="position:absolute; top:20px;  left:800px"><b>ohm</b></p>
   <p style="position:absolute; top:140px;  left:960px"><b>H</b></p><!--Input Box's labels-->
   <p style="position:absolute; top:180px;  left:930px"><b>uF</b></p>
 	
@@ -236,7 +236,7 @@ Again if in any case the input signal comes as a straight line, decrease the Tim
   <table id="myTable" border="1">
    <tr>
    <th> Sl. No.</th>
-   <th>ζ</th>
+   <th>&#950;</th>
    <th>Frequency(Hz)</th>
   <th>V<sub>R</sub></th>
   <th>V<sub>L</sub></th>
@@ -283,7 +283,7 @@ Again if in any case the input signal comes as a straight line, decrease the Tim
  var L=document.getElementById('L').value ;
  var C=document.getElementById('C').value/1000000 ;
  document.getElementById('R').value=document.getElementById('range').value;
- document.getElementById('ζ').value = (document.getElementById('R').value/2)* Math.sqrt(C/L);
+ document.getElementById('zeta').value = (document.getElementById('R').value/2)* Math.sqrt(C/L);
  }
  
  var canvas,ctx;
@@ -569,9 +569,9 @@ tmaxs= document.getElementById("fq-knob").value*10*Math.pow(10,-3) ;// in msec  
 	var w2= Math.pow(w,2);
 	var d1 = (1-(w2*l*c));
 	var d12= Math.pow(d1,2);
-	var ζ = document.getElementById('ζ').value;
-	var ζ2= Math.pow(ζ,2);
-	var d2= (4*ζ2*w2*l*c);
+	var zeta = document.getElementById('zeta').value;
+	var zeta2= Math.pow(zeta,2);
+	var d2= (4*zeta2*w2*l*c);
 	var TD= Math.sqrt(d12+d2);
 	var gain= 1/TD;
 	
@@ -702,9 +702,9 @@ function sineoutput(){
 	var w2= Math.pow(w,2);
 	var d1 = (1-(w2*l*c));
 	var d12= Math.pow(d1,2);
-	var ζ = document.getElementById('ζ').value;
-	var ζ2= Math.pow(ζ,2);
-	var d2= (4*ζ2*w2*l*c);
+	var zeta = document.getElementById('zeta').value;
+	var zeta2= Math.pow(zeta,2);
+	var d2= (4*zeta2*w2*l*c);
 	var TD= Math.sqrt(d12+d2);
 	var gain= 1/TD;
 	
@@ -1093,15 +1093,15 @@ function tabled() {
 	var w2= Math.pow(w,2);
 	var d1 = (1-(w2*L*C));
 	var d12= Math.pow(d1,2);
-	var ζ = document.getElementById('ζ').value;
-	var ζ2= Math.pow(ζ,2);
-	var d2= (4*ζ2*w2*L*C);
+	var zeta = document.getElementById('zeta').value;
+	var zeta2= Math.pow(zeta,2);
+	var d2= (4*zeta2*w2*L*C);
 	var TD= Math.sqrt(d12+d2);
 	var gain= 1/TD;
 	
 	arr[6]= 20 * ( Math.log10(gain));
 	var sqlc= Math.sqrt(L*C);
-	var pn=2*ζ*w* sqlc;
+	var pn=2*zeta*w* sqlc;
 	var pd=d1;
 	arr[7]= - (Math.atan2(pn,pd)*(180/(Math.PI)));	
 	
@@ -1272,9 +1272,9 @@ document.getElementById('chartContainer').style.display="none";
 document.getElementById('chartContainer2').style.display="none";
 document.getElementById('fq-knob-fng').value="100";
 document.getElementById('fq-knob').value="1";
-if(document.getElementById('onff').value=="off"){
+//if(document.getElementById('onff').value=="off"){
 
-}
+//}
 
 
 }
