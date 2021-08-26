@@ -1,0 +1,285 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Virtual High Voltage Lab</title>
+
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="../images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Virtual High Voltage Laboratory</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    3-Stage Cockroft Walton Voltage Multiplier
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p class="heading-content">High Voltage DC is used in several applications in industries,
+                                in equipments and Research. HV DC is also employed to transmit bulk power. That apart
+                                HVDC is used in testing of High Voltage Cables and as a source for charging the Impulse 
+                                Voltage and Current Generator.  <br/><br/>
+
+                                The most usual way of Generating High Voltage DC is through rectification
+                                using a) Half wave b) Full wave c) Multiplier Circuits. In all these cases 
+                                the AC input is taken from a High Voltage transformer.   </p><br/>
+
+
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">
+
+                            <p class="heading-content"><center><h4>Cockroft Walton Voltage Multipliers</h4></center><br/>
+                            High Voltage DC Multipliers are used to generate high DC Voltages 
+                            using a single supply high voltage transformer. Cockroft and Walton
+                            popularized the use of multipliers using a multi-stage diode capacitor
+                            combination. A Three stage multiplier circuit is shown below:<br/>
+
+                            </p><br/>
+                            <center><h6>Three Stage Voltage Multipliers</h6></center><br/>
+
+                            <p class="content"><center><img style="width:598px;height:574px;" src="images/img1.jpg" alt="" /><br/>
+                                Fig: 1. Three Stage Cockroft Walton Voltage Multiplier</center></p><br/>
+
+                            <p class="heading-content">C<sub>1</sub>,C<sub>2</sub>,C<sub>3</sub> constitute the oscillating column as the voltage
+                                across these capacitors vary with time,Whereas the capacitors C<sub>1</sub>',C<sub>2</sub>',C<sub>3</sub>'
+                                comprise the smoothening column since the DC Voltage output is fairly constant.<br/><br/>
+
+                                The DC Output voltage (V<sub>dc</sub>) is nominally the twice the peak input voltage (V<sub>max</sub>)
+                                multiplied by the number of stages. Thus, for the circuit above a maximum voltage 
+                                of V<sub>dc</sub>= 3 * 2 * V<sub>max</sub> is possible. In practice, the DC output voltage is significantly lower,
+                                particularly when there are a large number of stages.<br/><br/>
+
+                                The multiplier circuits are popularly used in High Voltage DC power 
+                                supply for particle accelerators. Multipliers are also used for charging
+                                capacitor banks to high voltages at roughly constant charging power. The
+                                downside of the multipliers is that the ripple and voltage drop on the 
+                                output is high as the load current increases. The voltage regulation,
+                                is thus, poor at high loads.<br/><br/></p>
+
+                            <p>
+                            <h4>Regulation and ripple calculations</h4>
+                            </p>   <br />
+
+                            <p class="heading-content"> Assuming all the stage capacitances to be equal,
+                                the voltage drop under load is given by :<br/>
+
+                                <b>V<sub>drop</sub></b> = I<sub>l</sub>/(f*C)*(2/3*n^3 + n^2/2 - n/6)<br/><br/>
+
+                                where:<br/>
+                                I<sub>l</sub> is the load current<br/>
+                                C is the stage capacitance<br/>
+                                f is the AC frequency<br/>
+                                n is the number of stages.<br/>
+                                The ripple voltage, in the case where all stage capacitances (C<sub>1</sub> through C(2*n)) 
+                                may be calculated from:<br/><br/>
+
+                                <b>Vripple</b> = I<sub>l</sub>/(f * C)*n*(n+1)/2<br/><br/>
+
+                                As seen from this equation, the ripple increases as the square of 
+                                the number of stages. A common modification to the design is to make
+                                the stage capacitances larger at the bottom, with C<sub>1</sub> & C<sub>2</sub> = nC, C<sub>3</sub> 
+                                & C<sub>4</sub>= (n-1)C, and so forth. Differentiating the drop equation with 
+                                respect to the number of stages gives an equation for the optimum number 
+                                of stages N<sub>opt</sub> (for the equal valued capacitor design):<br/><br/>
+                                <b>N<sub>opt</sub></b>  =&Sqrt;(V<sub>max</sub> * f * C/I<sub>l</sub>)   <br/> <br/>
+
+
+                                Increasing the frequency can dramatically reduce the ripple, and the voltage drop under load.<br/>
+
+                                <br />
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p class="heading-content"><ul> 
+                                <li>Understand the functioning of High Voltage DC Multiplier.</li>
+                                <li>Study the variation of ripple and voltage drop by varying each one of the following parameters:<br/>
+                                    a)Load Current<br/>
+                                    b)Frequency and <br/>
+                                    c)Capacitance.<br/>
+                                </li>
+
+                            </ul>
+
+                            </p>                            
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator
+                        </div>
+
+                        <div class="content" id="experiment-article-section-4-content">                            
+                           <p class="content">
+                            <a href ="./multiplier/Test_VM.html" target="_blank"> Simulation </a> 
+                            </p>                             
+                        </div>
+                    </section>
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/manual.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p class="heading-content"><ol>
+                               
+                                <li>When the page gets loaded two buttons with values "Click to display the
+                                    functioning of Voltage Multiplier" & "Click to stop the
+                                    functioning of Voltage Multiplier" are displayed.</li>
+
+                                <li>The first button is clicked to display the functioning of the Voltage Multiplier & the second button is clicked to stop the functioning of the same.</li>
+
+                                <li>The input parameters are Current (in &micro;A), Frequency (in Hz), Capacitance 
+                                    (in &micro;F) and these are associated with corresponding text boxes which are displayed.</li>
+
+                                <li>The input values of each of these variables to be entered should be within 
+                                    the range specified.</li>
+
+                                <li>Upon entering the values of all the variables, the "Calculate drop and ripple"
+                                    button is clicked to display the computed ripple and drop values. 
+                                    This calculation of drop and ripple is for a set of values of Current 
+                                    (in &micro;A), Frequency (in Hz), Capacitance (in &micro;F)In addition, the variation of one of the above parameters on the ripple
+                                    voltage can also be studied.</li>
+
+                                <li>The parameters that have to be varied are shown to 
+                                    the user on the right pane.The user have to choose the parameter to vary from the list & click on the
+									"Choose Parameter to vary" button. Only this parameter is varied while the others are
+                                    kept constant during the experiment.</li>
+
+                                <li>To begin with the user enters the appropriate values
+                                    of all the parameters and calculates the drop and ripple
+                                    as mentioned in step 5.</li>
+
+                                <li>Step 5 is repeated by changing the value of the desired parameter
+                                    only. The other parameters which are constant cannot be edited.</li>
+
+                                <li>Steps 8 and 9 can be repeated for a range of the parameter 
+                                    that is being varied.</li>
+
+                                <li>After calculating the drop and ripple for six values the
+                                    user is prompted with the "Show Graph" button.</li>
+
+                                <li>The "Show Graph" button is clicked to depict the graph
+                                    for the parameter chosen versus calculated drop and ripple.</li>
+
+                                <li>These steps can be repeated for other parameters.</li>
+
+
+                            </ol>
+                            </p>    <br/>                        
+                        </div>
+                    </section>
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-6">
+                        <div class="icon" id="experiment-article-section-6-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/app.jpg"></div>
+                        <div class="heading" id="experiment-article-section-6-heading">
+                            Application
+                        </div>
+
+                        <div class="content" id="experiment-article-section-6-content">                           
+                            <p class="heading-content">Below are certain areas in which voltage multiplier finds its place:<br/>
+                            <ul> 
+                                <li>Used in High Voltage DC power supply for particle accelerators.</li>                                
+                                <li>Used for charging capacitor banks to high voltages at roughly constant charging power.</li> 
+
+                            </ul></p>                   
+                        </div>
+                    </section>
+                   
+                </div>
+            </article>
+			<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2008-2016 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Experiment-Voltage Multiplier</title>
+<script language="javascript">AC_FL_RunContent = 0;</script>
+<script src="AC_RunActiveContent.js" language="javascript"></script>
+<script src="multiplierJS2.js" language="javascript"></script> 
+<script type="text/javascript" language="javascript" src="sources/jscharts.js"></script>
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 18px;
+	color: #FFFFFF;
+}
+-->
+<!--
+.style6 {
+	font-size: 14px;
+	color:#009900;
+}
+-->
+<!--
+.style5 {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+-->
+<!--
+.style2{color:#009900; font-size:9px;}
+-->
+<!--
+.style3{color:#009900; font-size:9px;}
+-->
+
+.hide{visibility:hidden;}
+body{color:#FFFFFF; font-size:16px; font-weight:bold;}
+.style4 {color: #009900;}
+</style>
+
+</head>
+<body bgcolor="black" text="#000000">
+
+
+
+<div align="right"><a href="Procedure_page.html" title="click to read Instructions" target="_self"><span class="style4">Instructions</span></a><br />
+</div>
+<div align="center" class="style1" id="div1">
+  <h3><big>Voltage Multiplier<br /></big>(3 Stages)</h3>
+</div>
+<div id="divmult">
+  <table align="center" width="1122" border="1">
+    <tr><td colspan="3">
+    <table>
+      <tr>
+	<td class="" width="149" height="50" valign="top" id="td1">Enter Frequency <br />
+    <input type="text" name="txtfreq" id="txtfreq" size="6" />Hz<br /><div id="divtxtfreq"></div></td>
+    <td width="178" class="" height="50" valign="top" id="td2">Enter Stage Capacitance <br />
+    <input type="text" name="txtcap" id="txtcap" size="6"/>&micro;F<br /><div id="divtxtcap"></div></td>
+    <td width="162" height="50" class="" valign="top" id="td3">Enter Load Current <br />
+    <input type="text" id="txtlodcrnt" size="6"/>&micro;A<br /><div id="divtxtcrnt"></div></td>
+	<td width="126" height="50" valign="top" class="" id="td4">Number of Stages <br />
+    <input type="text" id="txtnmbrofstgs" size="6" value="3" readonly="readonly"/></td>
+    <td width="124" class="" height="50" valign="top" id="td5">Calculated Ripple <br />
+    <input type="text" id="txtriple" size="6"/>V</td>
+    <td width="117" height="50" valign="top" class="" id="td6">Calculated Drop <br /> 
+    <input type="text" id="txtdrop" size="6"/>V<br /></td>
+    <td width="163" height="50" align="center" valign="middle" id="td7"><div id="divbtncalc"><input type="button" id="btncalc" class="" value="Calculate Drop and Ripple" onclick="calcrippledrop()" /></div></td>
+  <td width="57" height="50" align="center" valign="middle" id="td8"><input type="button" id="btnrestart" class="" value="Restart" onclick="reload1()" /></td>
+    </tr>
+    </table></td></tr>
+	
+    <tr><td colspan="2" align="center" height="15"><div id="divtxtmsg"></div></td></tr>
+	
+    <tr>
+      <td width="400" height="700"> <table><tr><td width="712" align="center" valign="top">
+	  
+	  <div id= "anim">
+	<img id="img1" src="./images/3m1.png " style="position:absolute; top:250px; left:150px; height:550px;width:600px" />
+	
+	</div>
+	  </td></tr>
+	  
+
+
+</td></tr>
+
+
+
+        <tr><td align="center"><div id="divbtndisplayflsh"style="position:relative;top:270px">
+		</div>
+		
+		<div id="divbtndisplayflsh2"style="position:relative;top:300px">
+		<input type= 'button' onclick = 'CancelRun()' value= 'click to stop the functioning of voltage Multiplier' >
+		</div>
+		
+		
+		
+		</td></tr></table></td>
+      <td width="291" align="left" valign="top">
+      <div class="" id="divtxtrange">Range for Input parameters:<br />
+		Current(I):0.1&micro;A-100&micro;A<br />
+		Frequency(f):50Hz-5000Hz<br />
+		Stage Capacitance(C):0.1&micro;F-2&micro;F<br />
+  	  </div> 
+<div><select class="hide" id="varyparamsel" onchange="paramdisable()"><option></option><option>Vary Current</option>
+  <option>Vary Frequency</option><option>Vary Stage Capacitance</option></select>
+  <input class="hide" type="button" value="choose parameter to vary" id="varyparambtn" onclick="chooseparam()" /></div>
+  <div id="graphdiv"></div>
+  <div align="justify" id="txtdiv"></div>
+  <div>
+  <select class="hide" id="currentsel"><option></option></select><select class="hide" id="ripplesel1"><option></option></select><select class="hide" id="dropsel1"><option></option></select><br />
+  <select class="hide" id="freqsel"><option></option></select><select class="hide" id="ripplesel2"><option></option></select><select class="hide" id="dropsel2"><option></option></select><br />
+  <select class="hide" id="cap1sel"><option></option></select><select class="hide" id="ripplesel3"><option></option></select><select class="hide" id="dropsel3"><option></option></select><br />
+  <select class="hide" id="cap2sel"><option></option></select><select class="hide" id="ripplesel4"><option></option></select><br />
+  </div>
+  </td>
+    </tr>
+    <tr><td colspan="2"><div style="positio:absolute;left:150px" id="canvas"></div></td></tr>
+  </table>
+</div>
+
+<script language="javascript">
+	<!--if (AC_FL_RunContent == 0) {
+		//alert("This page requires AC_RunActiveContent.js.");
+	//} else {
+		//AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0','width','700','height','700','id','multiplier3','align','middle','menu','false','src','multiplier3','quality','high','bgcolor','#330000','name','multiplier3','allowscriptaccess','sameDomain','allowfullscreen','false','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','multiplier3' ); //end AC code
+	//}-->
+	
+	 //circuit Animation code//
+  var arr = [];
+arr[0]= new Image();
+arr[0].src = "./images/3m1.png";
+arr[1]= new Image();
+arr[1].src = "./images/3m2.png";
+arr[2]= new Image();
+arr[2].src = "./images/3m3.png";
+arr[3]= new Image();
+arr[3].src = "./images/3m4.png";
+arr[4]= new Image();
+arr[4].src = "./images/3m5.png";
+arr[5]= new Image();
+arr[5].src = "./images/3m6.png";
+arr[6]= new Image();
+arr[6].src = "./images/3m7.png";
+arr[7]= new Image();
+arr[7].src = "./images/3m8.png";
+arr[8]= new Image();
+arr[8].src = "./images/3m9.png";
+arr[9]= new Image();
+arr[9].src = "./images/3m10.png";
+arr[10]= new Image();
+arr[10].src = "./images/3m11.png";
+arr[11]= new Image();
+arr[11].src = "./images/3m12.png";
+arr[12]= new Image();
+arr[12].src = "./images/3m13.png";
+arr[13]= new Image();
+arr[13].src = "./images/3m14.png";
+arr[14]= new Image();
+arr[14].src = "./images/3m15.png";
+
+var i=0;
+var stop;
+function slide(){
+ document.getElementById("img1").src= arr[i].src;
+ i++; 
+ if(i==arr.length){
+  i=0;
+ }
+ stop=setTimeout(function(){ slide(); },500);
+ clearTimeout(60); 
+}
+function RunAnim(){
+//document.getElementById("img1").style.display="block";
+slide('img1',arr);
+
+}
+ function CancelRun(){
+ clearTimeout(stop);
+}
+	
+	
+	
+	
+	
+	
+	
+</script>
+
+
+
+</body>
+</html>
