@@ -1,6 +1,6 @@
 /*
  * 
- * Author: Subir Sekhar
+ * Author: Piyali Chattopadhyay
  * Co-Author: P. K. Jana
  * IIT Kharagpur
  * 
