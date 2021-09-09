@@ -65,6 +65,45 @@ var quizJSON = {
             "incorrect": "<p><span></span> </p>"
         },
         
+       {// Question 5
+            "q": "  Half wave voltage multiplier can provide any degree of voltage multiplication by cascading",
+            "a": [
+                {"option": "  only doubler", "correct": false},
+                {"option": "only tripler", "correct": false},
+                {"option": "any multiplication", "correct": true},
+                {"option": "none of the above", "correct": false}// no comma here
+            ],
+            "correct": "<p><span></span> </p>",
+            "incorrect": "<p><span></span> </p>"
+        }, 
+        
+         {// Question 6
+            "q": " A circuit that adds positive or negative dc voltage to an input sine wave is called",
+            "a": [
+                {"option": " clipper", "correct": false},
+                {"option": "diode clamp", "correct": false},
+                {"option": " clamper", "correct": true},
+                {"option": "limiter", "correct": false}// no comma here
+            ],
+            "correct": "<p><span></span> </p>",
+            "incorrect": "<p><span></span> </p>"
+        }, 
+        
+        {// Question 7
+            "q": " The use of a capacitor filter in a rectifier circuit gives satisfactory performance only when the load ",
+            "a": [
+                {"option": "current is high", "correct": false},
+                {"option": "voltage is high", "correct": false},
+                {"option": " current is low", "correct": true},
+                {"option": "voltage is low", "correct": false}// no comma here
+            ],
+            "correct": "<p><span></span> </p>",
+            "incorrect": "<p><span></span> </p>"
+        }, 
+        
+        
+        
+        
           
     ]
 };
