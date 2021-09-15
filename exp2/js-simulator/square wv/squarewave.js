@@ -188,7 +188,7 @@ function sqropwv() {
 	var poly = (sqxl + sqpoly1);
 	var deno = Math.sqrt(poly);
 	var vo  = xl/deno;//Math.sqrt(1+Math.pow((frqfng/15.915),4))`;
-	document.getElementById('opvalue').value = vo*vp;
+	//document.getElementById('opvalue').value = vo*vp;
 	
     flag = 1;
     // define plot paramaters
