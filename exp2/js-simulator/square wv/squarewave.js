@@ -87,6 +87,9 @@ document.getElementById('tr2').style.display="block";
 document.getElementById("chhn1").disabled = true;
         document.getElementById("chhn2").disabled = true;
         document.getElementById("dual").disabled = true;
+		document.getElementById("opvalue").disabled = true;
+		document.getElementById("rectifiedop").disabled = true;
+		//document.getElementById("opvalue").value = '0';
     drawGrid(ctx);
     drawAxis();
     sqrwv();
@@ -196,13 +199,13 @@ function sqropwv() {
     // create function 
     for (var i = 0; i < axes.N; i++) {
         x[i] = tstart + i * dt;
-        y[i] = vo*(vp/2) * Math.sign( Math.sin(2 * 3.1415 * frqfng * x[i] + phsl * 3.1415 / 180));
+        y[i] = (vp/2) *Math.sign ( Math.sin(2 * 3.1415 * frqfng * x[i] + phsl * 3.1415 / 180));
     }
 	if(frqfng>=14500 && frqfng<=15500){
 		document.getElementById('fq-knob').value=0.05;
 	for (var i = 0; i < axes.N; i++) {
         x[i] = tstart + i * dt;
-        y[i] = vo*(vp/2) * ( Math.sin(2 * 3.1415 * frqfng * x[i] + phsl * 3.1415 / 180));
+        y[i] = (vp/2) *4* (( Math.sin(2 * 3.1415 *1* frqfng * x[i] + phsl * 3.1415 / 180))/(Math.PI));
     }
 	alert ('1st Harmonic is observed');
 	
@@ -212,7 +215,7 @@ function sqropwv() {
 		//document.getElementById('fq-knob').value=0.009;
 	for (var i = 0; i < axes.N; i++) {
         x[i] = tstart + i * dt;
-        y[i] = (vo*(vp/2)) *(1/3)* ( Math.sin(2 * 3.1415 * 3*frqfng * x[i] + phsl * 3.1415 / 180));
+        y[i] = (vp/2) *4* ((( Math.sin(2 * 3.1415 *1* frqfng * x[i] + phsl * 3.1415 / 180))/(Math.PI))+ (( Math.sin(2 * 3.1415 *3* frqfng * x[i] + phsl * 3.1415 / 180))/(3*Math.PI)));
     }
 	document.getElementById('harmonic').innerHTML="Harmonic(a3)";
 	alert ('3rd Harmonic is observed');
@@ -223,7 +226,7 @@ function sqropwv() {
 		//document.getElementById('fq-knob').value=0.009;
 	for (var i = 0; i < axes.N; i++) {
         x[i] = tstart + i * dt;
-        y[i] = (vo*(vp/2)) *(1/5)* ( Math.sin(2 * 3.1415 * 5*frqfng * x[i] + phsl * 3.1415 / 180));
+        y[i] = (vp/2) *4* ((( Math.sin(2 * 3.1415 *1* frqfng * x[i] + phsl * 3.1415 / 180))/(Math.PI))+ (( Math.sin(2 * 3.1415 *3* frqfng * x[i] + phsl * 3.1415 / 180))/(3*Math.PI))+ (( Math.sin(2 * 3.1415 *5* frqfng * x[i] + phsl * 3.1415 / 180))/(5*Math.PI)));
     }
 	document.getElementById('harmonic').innerHTML="Harmonic(a5)";
 	alert ('5th Harmonic is observed');
